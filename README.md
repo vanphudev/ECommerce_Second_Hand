@@ -19,7 +19,7 @@
 
 -  **Mô tả:** Dự án thực tập - Xây dựng một trang web bán hàng second hand.
 
--  **Second Hand** Dự án "Web Bán Hàng Second Hand" nhằm xây dựng một nền tảng thương mại điện tử nơi khách hàng có thể mua và bán các sản phẩm đã qua sử dụng.
+-  **Second Hand:** Dự án "Web Bán Hàng Second Hand" nhằm xây dựng một nền tảng thương mại điện tử nơi khách hàng có thể mua và bán các sản phẩm đã qua sử dụng.
 
 -  **Design:** [Figma](https://www.figma.com/design/hQTLpDvcsf8mtLwnRKBBEi/Web-Second-Hand?node-id=500-5876&t=NKFBS6BLJXIkAj1P-1)
 
