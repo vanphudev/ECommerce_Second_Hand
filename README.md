@@ -7,7 +7,7 @@
 ## Mô tả Dự án:
 
 -  **Tên Dự án:** Second Hand - Web Bán Hàng Second Hand.
--  **Nhóm thực hiện:** TEAM 07.
+-  **Nhóm thực hiện:** INTERN - TEAM 07.
 -  **Các thành viên:**
 
    -  **Nguyễn Văn Phú** - HUIT - 2001216041 - [Profile GitHub](https://github.com/vanphudev) - Leader.
