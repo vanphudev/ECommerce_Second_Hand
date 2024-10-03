@@ -1,0 +1,181 @@
+$font: "Times New Roman", serif;
+$color:#55018d;
+.title {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 35px;
+  padding-top: 15px;
+}
+.Main_Card {
+  flex: 0 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  .Card {
+    background: $color;
+    border-radius: 40px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 152px;
+    .Card_ {
+      width: 140px;
+      height: 140px;
+      background: rgba(217, 217, 217, 0);
+      border-radius: 40px;
+      border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .title {
+
+      padding-top: 15px;
+    }
+  }
+  
+}
+
+.custom-button {
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+  background: #65558f;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+.Main_CardSupport {
+  position: relative;
+  
+  .title{
+    background-color: #fff;
+    border: 1px solid #FAC126;
+    width: 225px;
+    height: 90px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: $color;
+    font-size: 25px;
+    text-align: center;
+    position: absolute; 
+    top: -45px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px;
+    
+  }
+  .Card{
+    border: 1px solid #FAC126;
+    width: 380px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 200px;
+     
+    .Card_Item{
+      padding: 10px;
+      width: 360px;
+      height: 180px;
+      background: $color;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 400;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+
+
+}
+.Main_CardReview{
+  margin: 0 20px 0 0px;
+  width: 550px;
+  height: 350px;
+  background-color: #fff;
+  box-shadow: 0px 7px 8px #767676;
+  padding: 40px;
+  line-height: 35px;
+  border-radius: 40px;
+  .Card{
+    .icon{
+      font-size: 25px;
+      display: flex;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+    .title{
+      text-align: left;
+    }
+    img{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    .Card_Name{
+      padding-top: 30px;
+      display: flex;
+      .Name{
+        padding-left: 30px;
+        p{
+          color: black;
+          font-size: 20px;
+        }
+      }
+      
+    }
+  }
+}
+
+.MuaSam_Image {
+  width: 100%;
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: flex-end; 
+
+  .image-container {
+    img {
+      border-radius: 20px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+
+    .image1,
+    .image8 {
+      width: 200px;
+      height: 300px;
+    }
+    .image2,
+    .image9 {
+      width: 200px;
+      height: 90px;
+    }
+    .image3,
+    .image7 {
+      width: 200px;
+      height: 300px;
+    }
+    .image4,
+    .image6 {
+      width: 200px;
+      height: 175px;
+    }
+    .image5 {
+      width: 200px;
+      height: 70px;
+    }
+  }
+}

@@ -1,0 +1,327 @@
+$color_text: #310e68;
+$font: "Times New Roman", serif;
+$color: #55018d;
+$height_div: 700px;
+h1 {
+  margin: auto;
+  font-family: $font;
+  color: $color;
+  font-size: 40px;
+  text-align: center;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Text1 {
+  color: $color_text;
+  font-size: 65px;
+  font-weight: 700;
+  font-family: $font;
+}
+.Text2 {
+  padding: 20px 0;
+  color: $color_text;
+  font-size: 28px;
+  font-weight: 500;
+  font-family: $font;
+}
+
+.Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: $font;
+}
+
+.Icon {
+  width: 45px;
+  height: 45px;
+  background: $color;
+  border-radius: 50%;
+  margin: auto;
+
+  p {
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 25px;
+    font-family: $font;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-30px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+.Icon {
+  animation: float 2s ease-in-out infinite;
+}
+.main {
+  margin-top: 70px;
+  .intro {
+    width: 100%;
+    height: 700px;
+
+    .intro_Text {
+      line-height: 70px;
+      text-align: center;
+      h1 {
+        font-size: 45px;
+      }
+
+      p {
+        font-size: 40px;
+        color: $color;
+      }
+    }
+  }
+
+  .KhamPha {
+    width: 100%;
+    height: 650px;
+    padding: 30px 0;
+    .KhamPha_Text {
+      text-align: center;
+      font-size: 30px;
+      font-family: Times New Roman;
+      font-weight: 400;
+    }
+    .KhamPha_Card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px 0;
+      line-height: 60px;
+    }
+  }
+
+  .DichVu {
+    width: 100%;
+    height: $height_div;
+    background: #f5f2f7;
+
+    .Col1 {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      .DichVu_Text {
+        width: 420px;
+      }
+    }
+    .Col2 {
+      .Image {
+        height: 690px;
+      }
+      .image_1,
+      .image_2,
+      .image_3,
+      .image_4,
+      .image_5 {
+        background-size: cover;
+        background-position: center;
+        border-radius: 40px;
+        margin: 10px;
+      }
+    }
+    .image_1 {
+      width: 360px;
+      height: 360px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url(src/v1/modules/customer_site/pages/pageLanding/assets/images/kiemhang.png);
+      p {
+        text-align: center;
+        position: absolute;
+        top: 17%;
+        left: 9%;
+      }
+    }
+    .image_2 {
+      width: 260px;
+      height: 190px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url(src/v1/modules/customer_site/pages/pageLanding/assets/images/mienvanchuyen.jpg);
+
+      top: 0%;
+      left: 61%;
+      position: absolute;
+      p {
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        font-size: 25px;
+      }
+    }
+    .image_3 {
+      width: 160px;
+      height: 150px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url(src/v1/modules/customer_site/pages/pageLanding/assets/images/nhanhchong.jpg);
+
+      top: 35%;
+      left: 56%;
+      position: absolute;
+      p {
+        position: absolute;
+        top: 65%;
+        left: 10%;
+        font-size: 18px;
+      }
+    }
+    .image_4 {
+      width: 235px;
+      height: 230px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url(src/v1/modules/customer_site/pages/pageLanding/assets/images/traohang.jpg);
+      top: 58%;
+      left: 6%;
+      position: absolute;
+      p {
+        position: absolute;
+        top: 45%;
+        left: 18%;
+        font-size: 30px;
+      }
+    }
+    .image_5 {
+      width: 370px;
+      height: 230px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url(src/v1/modules/customer_site/pages/pageLanding/assets/images/giaohang.jpg);
+      top: 63%;
+      left: 45%;
+      position: absolute;
+      p {
+        position: absolute;
+        top: 80%;
+        left: 10%;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .Feedback {
+    background: #e8e1cd;
+    width: 100%;
+    height: $height_div;
+
+    .Feedback_Col1 {
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url(src/v1/modules/customer_site/pages/pageLanding/assets/images/imagefeedback.jpeg);
+      height: 700px;
+      background-size: cover;
+      background-position: center;
+
+      .feedback-image {
+        border-radius: 30px;
+        max-width: 100%;
+        height: auto;
+      }
+      .Avatar {
+        position: absolute;
+        bottom: 12%;
+        left: 22%;
+      }
+      .Avatar img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+      .Text {
+        color: #fff;
+        position: absolute;
+        bottom: 8%;
+        left: 40%;
+        line-height: 40px;
+        .p1 {
+          font-size: 30px;
+          font-weight: 600;
+        }
+        .p2 {
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+    .Feedback_Col2 {
+      flex: none;
+      text-align: center;
+      padding: 20px;
+      p {
+        color: #fac126;
+      }
+      Button {
+        background: #fac126;
+      }
+    }
+  }
+  .Support {
+    width: 100%;
+    height: $height_div;
+    padding-top: 130px;
+    h1 {
+      background: $color;
+      color: #fff;
+      width: 650px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0px 7px 8px #767676;
+    }
+    .support-card {
+      display: flex;
+      padding-top: 150px;
+      justify-content: space-between;
+    }
+  }
+  .Review {
+    background: #f5f2f7;
+    width: 100%;
+    height: $height_div;
+    h1 {
+      padding: 70px 0;
+    }
+    .Review-card {
+      display: flex;
+      .Icon {
+        animation: not();
+        p {
+          font-size: 20px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .Register {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+      url(src/v1/modules/customer_site/pages/pageLanding/assets/images/imagefooter.webp);
+    height: $height_div;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
