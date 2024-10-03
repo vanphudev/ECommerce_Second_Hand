@@ -1,0 +1,76 @@
+$font: "Times New Roman", serif;
+$color:#55018d;
+.title {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 35px;
+  padding-top: 15px;
+}
+.Main_Card {
+  flex: 0 1 calc(33.333% - 20px);
+  padding: 20px 0;
+  .Card {
+    background: $color;
+    .title {
+      padding-top: 15px;
+    }
+  }
+  
+}
+
+
+
+
+.Main_CardSupport {
+  
+  .title{
+    color: $color;
+  }
+  .Card{
+    .Card_Item{
+      background: $color;
+    }
+  }
+  
+}
+
+
+
+.MuaSam_Image {
+  .image-container {
+    img {
+      border-radius: 20px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+
+    .image1,
+    .image8 {
+      width: 200px;
+      height: 300px;
+    }
+    .image2,
+    .image9 {
+      width: 200px;
+      height: 90px;
+    }
+    .image3,
+    .image7 {
+      width: 200px;
+      height: 300px;
+    }
+    .image4,
+    .image6 {
+      width: 200px;
+      height: 175px;
+    }
+    .image5 {
+      width: 200px;
+      height: 70px;
+    }
+  }
+}
