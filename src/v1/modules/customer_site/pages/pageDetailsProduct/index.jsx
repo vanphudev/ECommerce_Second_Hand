@@ -1,12 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 const PageDetailsProduct = () => {
-   return (
-      <>
-         <h1>Nội dung trang chi tiết sản phẩm</h1>
-         <Link to={import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_ABOUT_TEAM07}>Thông tin Team 07</Link>
-      </>
-   );
+   return <></>;
 };
 
 export default PageDetailsProduct;
