@@ -1,6 +1,6 @@
 export default {
    prefix: "tws-",
-   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+   content: ["./index.html", "./src/v1/**/*.{js,ts,jsx,tsx}"],
    theme: {
       screens: {
          sm: "480px",
