@@ -1,0 +1,74 @@
+.skin-care {
+  margin-top: 50px;
+}
+.title-skinCare {
+  margin-bottom: 20px;
+}
+.option-skinCare {
+  background-color: #55018d;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 20px;
+
+  button {
+    all: unset;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: #fff;
+      color: #fac126;
+    }
+  }
+  .btn-active {
+    background-color: #fff;
+    color: #fac126;
+  }
+}
+.item-search {
+  width: 90%;
+  .btn-search {
+    all: unset;
+    border-radius: 100px;
+    border: 1px solid #fac126;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: #fac126;
+      color: #fff;
+    }
+  }
+}
+
+.btn-view-all {
+  text-align: center;
+  button {
+    all: unset;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #55018d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.5s;
+    text-align: center;
+
+    &:hover {
+      background-color: #55018d;
+      color: #fff;
+    }
+  }
+}
