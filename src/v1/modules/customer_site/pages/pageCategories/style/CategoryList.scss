@@ -1,0 +1,93 @@
+.dqdt-sidebar {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-family: 'Quicksand', sans-serif;
+
+    .aside-content {
+        margin-bottom: 15px;
+
+        .title-head {
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #55018d;
+            color: white;
+            padding: 10px 17px;
+            border-radius: 8px 8px 0 0;
+            text-transform: uppercase;
+
+            margin-bottom: 0;
+            width: 295px;
+        }
+
+        .nav-category {
+            padding: 10px 0;
+            max-height: 270px;
+            overflow-y: auto;
+            border: 1px solid #55018d;
+            border-radius: 0 0 8px 8px;
+            width: 295px;
+
+            .ant-menu-item,
+            .ant-menu-submenu-title {
+                padding: 10px 15px;
+                font-size: 14px;
+                font-weight: normal;
+                color: #333;
+                border-bottom: 1px solid #eaeaea;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #6300a6;
+                }
+            }
+
+            .ant-menu-submenu-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .ant-menu-submenu-arrow {
+                    color: #333;
+                }
+
+                &:hover {
+                    .ant-menu-submenu-arrow {
+                        color: #6300a6;
+                    }
+                }
+            }
+
+            .ant-menu-sub {
+                background-color: #f9f9f9;
+
+                .ant-menu-item {
+                    padding-left: 40px;
+                    font-size: 12px;
+                    color: #555;
+
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+
+            // Scrollbar customization
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #55018d;
+                outline: 1px solid #55018d;
+            }
+
+            // Bỏ border dưới cùng
+            .ant-menu-item:last-child,
+            .ant-menu-submenu-title:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
