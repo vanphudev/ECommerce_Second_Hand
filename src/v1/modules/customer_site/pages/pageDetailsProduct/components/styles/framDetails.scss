@@ -1,0 +1,21 @@
+.frame-details {
+   display: flex;
+   max-width: 1125px;
+   min-width: 1000px;
+   flex-wrap: nowrap;
+   gap: 15px;
+   margin: 0 auto;
+   height: 100%;
+   padding: 10px;
+   .btn-brand__view {
+      background-color: #ffffff;
+      color: #646464;
+      border: 1px solid #646464;
+      padding: 10px 10px;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+   }
+}
