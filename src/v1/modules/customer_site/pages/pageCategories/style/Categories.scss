@@ -1,0 +1,257 @@
+.bread-crumb {
+    margin-bottom: 40px;
+    background: #f5f5f5;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 46px;
+    margin-left: 46px;
+}
+
+.breadcrumb {
+    margin: 0;
+    font-size: 14px;
+    padding: 15px 0px;
+    border-radius: 0;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+}
+
+.breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.mr_lr {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.breadcrumb li a:hover,
+.breadcrumb li.active,
+.breadcrumb li strong {
+    color: #55018d;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.sidebar-column {
+    margin-left: 46px;
+}
+
+.product-column {
+    margin-right: 46px;
+}
+
+.title-page {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    line-height: 24px;
+}
+
+.title-page span {
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.title-page span:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    background: #fac126;
+}
+
+.sidebar-column {
+    flex: 1;
+    /* Chiếm 1 phần */
+}
+
+.category-products {
+    flex: 3;
+    /* Chiếm nhiều phần hơn */
+}
+
+.sort-cate-left ul {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    /* Spacing between the buttons */
+}
+
+.sort-cate-left ul li {
+    border: 1px solid #FFD700;
+    /* Yellow border */
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.sort-cate-left ul li a {
+    color: #55018d;
+    /* Purple text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sort-cate-left ul li:hover {
+    background-color: #FFD700;
+    /* Yellow background on hover */
+}
+
+.sort-cate-left ul li:hover a {
+    color: #FFFFFF;
+    /* White text on hover */
+}
+
+
+.product-thumbnail img {
+    width: 206px;
+    /* Chiều rộng */
+    height: 360px;
+    /* Chiều cao */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh được căn chỉnh */
+}
+
+.item_product_main {
+    width: 206px;
+    /* Chiều rộng sản phẩm */
+    margin-bottom: 20px;
+}
+
+.products-view-grid .col-6 {
+    padding: 10px;
+    /* Giảm khoảng cách giữa các sản phẩm */
+}
+
+.sort-cate-left {
+    display: flex; // Sử dụng Flexbox
+    align-items: center; // Đảm bảo cả h3 và ul được căn giữa theo trục dọc
+    gap: 10px; // Khoảng cách giữa các phần tử
+}
+
+.sort-cate-left h3 {
+    margin: 0; // Xóa khoảng cách mặc định
+}
+
+.sort-cate-left ul {
+    list-style: none; // Xóa dấu đầu dòng
+    padding: 0;
+    margin: 0;
+    display: flex; // Sử dụng Flexbox để các phần tử ul nằm ngang
+    gap: 10px; // Khoảng cách giữa các phần tử li
+}
+
+.filter-icon .ant-btn {
+    background-color: #55018d; // Màu nền của nút Bộ lọc
+    border-color: #55018d; // Màu viền của nút Bộ lọc
+}
+
+.filter-icon .ant-btn:hover,
+.filter-icon .ant-btn:focus {
+    background-color: #6c32a2; // Màu khi hover hoặc focus
+    border-color: #6c32a2;
+}
+
+@media (max-width: 768px) {
+    .sidebar-column {
+        display: none; // Ẩn sidebar khi màn hình nhỏ hơn 768px
+    }
+
+    .filter-icon {
+        display: block; // Hiển thị icon Filter khi màn hình nhỏ hơn 768px
+        margin-bottom: 20px;
+    }
+
+    .product-column {
+        margin: 0; // Loại bỏ khoảng cách bên khi màn hình nhỏ
+    }
+
+    .products-view-grid .ant-col {
+        width: 50%; // Hiển thị 2 sản phẩm trên mỗi hàng khi ở màn hình nhỏ
+    }
+
+    .item_product_main {
+        width: 100%; // Đảm bảo sản phẩm chiếm đủ không gian trong cột
+    }
+}
+
+@media (min-width: 769px) {
+    .filter-icon {
+        display: none; // Ẩn icon Filter khi màn hình lớn hơn 768px
+    }
+}
+
+@media (max-width: 768px) {
+    .sort-cate-left {
+        overflow-x: auto; // Thêm thanh cuộn ngang cho phần sort
+        white-space: nowrap; // Đảm bảo các phần tử không xuống dòng
+        -webkit-overflow-scrolling: touch; // Cải thiện trải nghiệm cuộn trên thiết bị di động
+        padding-bottom: 10px; // Thêm khoảng cách bên dưới để dễ dàng cuộn
+    }
+
+    .sort-cate-left ul {
+        flex-wrap: nowrap; // Đảm bảo các phần tử ul không xuống dòng
+    }
+
+    .sort-cate-left ul li {
+        flex: 0 0 auto; // Đảm bảo mỗi phần tử có chiều rộng tự động
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        padding-left: 0; // Xóa padding bên trái để breadcrumb sát trái
+        text-align: left; // Đảm bảo breadcrumb căn trái hoàn toàn
+        margin-left: 0; // Xóa margin bên trái để breadcrumb sát trái
+    }
+
+    .container {
+        padding-left: 15px; // Điều chỉnh lại padding của container
+        padding-right: 15px;
+        margin-left: 0; // Đảm bảo không có margin dư thừa khi ở màn hình nhỏ
+        margin-right: 0;
+    }
+
+    .filter-icon {
+        display: block; // Hiển thị nút Bộ lọc khi màn hình nhỏ hơn 768px
+        margin-bottom: 20px;
+    }
+
+    .product-column {
+        margin: 0; // Loại bỏ khoảng cách bên khi màn hình nhỏ
+    }
+
+    .products-view-grid .ant-col {
+        width: 50%; // Hiển thị 2 sản phẩm trên mỗi hàng khi ở màn hình nhỏ
+    }
+
+    .item_product_main {
+        width: 100%; // Đảm bảo sản phẩm chiếm đủ không gian trong cột
+    }
+}
+
+@media (min-width: 769px) {
+    .filter-icon {
+        display: none; // Ẩn icon Filter khi màn hình lớn hơn 768px
+    }
+}
