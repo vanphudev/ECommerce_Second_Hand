@@ -1,0 +1,63 @@
+.dqdt-sidebar {
+    .aside-item {
+        margin-right: 0px;
+        position: relative;
+        float: left;
+        width: 100%;
+
+        .title-head {
+            position: relative;
+            font-size: 15px;
+            font-weight: 700;
+            background: #55018d;
+            color: #fff;
+            padding: 10px 17px;
+            text-transform: uppercase;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
+            width: 295px;
+        }
+
+        .aside-content {
+            width: 295px;
+            position: relative;
+            border: 1px solid #55018d;
+            padding: 10px 15px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .checkbox-group {
+            display: block;
+
+            .ant-checkbox-wrapper {
+                display: flex;
+                align-items: center;
+                /* Căn giữa theo chiều dọc */
+                margin-bottom: 10px;
+            }
+
+            .ant-checkbox {
+                margin-right: 10px;
+                /* Khoảng cách giữa checkbox và tên */
+            }
+        }
+
+        .filter-item {
+            margin-bottom: 10px;
+
+            &--check-box {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+            }
+
+            &--green {
+                color: #28a745;
+            }
+
+            .fa {
+                margin-right: 8px;
+            }
+        }
+    }
+}

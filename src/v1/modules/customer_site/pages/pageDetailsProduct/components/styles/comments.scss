@@ -1,0 +1,16 @@
+.user__info {
+   color: rgba(0, 0, 0, 0.63);
+}
+.user__comment {
+   .user__comment__imgs {
+      display: flex;
+      gap: 10px;
+      padding: 4px;
+      img {
+         width: 80px;
+         height: 80px;
+         border-radius: 10px;
+         border: 2px solid rgba(0, 0, 0, 0.21);
+      }
+   }
+}

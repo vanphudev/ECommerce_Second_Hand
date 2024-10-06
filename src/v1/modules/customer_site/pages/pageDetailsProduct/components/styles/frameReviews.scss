@@ -1,0 +1,23 @@
+.frame-review {
+   max-width: 1125px;
+   min-width: 1000px;
+   .frame-review__title {
+      .frame-review__title-text {
+         .frame-review__title-line {
+            .frame-review__select-items {
+               .frame-review__select-item {
+                  background-color: #ffffff;
+                  color: #000000;
+                  padding: 4px 20px;
+                  border: 1px solid #000000;
+                  border-radius: 5px;
+               }
+               .frame-review__select-item__active {
+                  background-color: #55018d;
+                  color: #ffffff;
+               }
+            }
+         }
+      }
+   }
+}
