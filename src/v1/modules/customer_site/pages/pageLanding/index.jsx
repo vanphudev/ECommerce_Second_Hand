@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CardItem from "./components/cardItem";
-import Button from "./components/button";
+import Button from "./components/Cutton";
 import CardSupport from "./components/cardSupport";
 import CardReview from "./components/cardReview";
-import ImageReveal from "./components/ScrollReveal";
+import ImageReveal from "./components/scrollReveal";
 import "./style.scss";
 
 import { IoWalletOutline } from "react-icons/io5";
