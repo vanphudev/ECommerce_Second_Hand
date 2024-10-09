@@ -7,6 +7,7 @@ const Home = React.lazy(() => import("../../pages/pageHome"));
 const SellerCentre = React.lazy(() => import("../../pages/pageSellerCentre"));
 const DetailsProduct = React.lazy(() => import("../../pages/pageDetailsProduct"));
 const Landing = React.lazy(() => import("../../pages/pageLanding"));
+const Cart = React.lazy(() => import("../../pages/pageCart"));
 
 const URL_HOME_DEFAULT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME_DEFAULT;
 const URL_HOME = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME;
@@ -15,7 +16,7 @@ const URL_CATEGORIES = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CATEGOR
 const URL_SELLER_CENTRE = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_SELLER_CENTRE;
 const URL_DETAILS_PRODUCT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAILS_PRODUCT;
 const URL_LANDING = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LANDING;
-
+const URL_CART = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CART;
 const PublicRoutes = [
    {
       path: URL_HOME_DEFAULT,
@@ -50,6 +51,11 @@ const PublicRoutes = [
             // Routes for: DetailsProduct
             path: URL_DETAILS_PRODUCT,
             element: <DetailsProduct />,
+         },
+         {
+            // Routes for: Cart
+            path: URL_CART,
+            element: <Cart />,
          },
          {
             // Routes for: NotFound

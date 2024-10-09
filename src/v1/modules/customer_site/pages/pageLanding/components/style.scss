@@ -14,6 +14,9 @@ $color:#55018d;
   padding: 20px 0;
   .Card {
     background: $color;
+    .Card_{
+      border: 1px solid #fff;
+    }
     .title {
       padding-top: 15px;
     }
@@ -21,22 +24,24 @@ $color:#55018d;
   
 }
 
-
-
-
 .Main_CardSupport {
   
   .title{
     color: $color;
+    border: 1px solid #FAC126;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    translate: -50%;
   }
   .Card{
+    border: 1px solid #FAC126;
     .Card_Item{
       background: $color;
     }
   }
   
 }
-
 
 
 .MuaSam_Image {
