@@ -1,22 +1,22 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import CardItem from "./components/CardItem";
-import Button from "./components/Button";
-import CardSupport from "./components/CardSupport";
-import CardReview from "./components/CardReview";
-import ImageReveal from "./components/ScrollReveal";
+import { Link } from "react-router-dom";
+import CardItem from "./components/cardItem";
+import Button from "./components/button";
+import CardSupport from "./components/cardSupport";
+import CardReview from "./components/cardReview";
+import ImageReveal from "./components/scrollReveal";
 import "./style.scss";
 
-import {IoWalletOutline} from "react-icons/io5";
-import {AiOutlineLike} from "react-icons/ai";
-import {TbTruckDelivery} from "react-icons/tb";
-import {MdOutlineSecurity} from "react-icons/md";
-import {IoChatbubbleEllipsesOutline} from "react-icons/io5";
-import {MdOutlineSupportAgent} from "react-icons/md";
-import {Row, Col} from "antd";
-import {Image} from "antd";
-
-import {IoStar} from "react-icons/io5";
+import { IoWalletOutline } from "react-icons/io5";
+import { AiOutlineLike } from "react-icons/ai";
+import { TbTruckDelivery } from "react-icons/tb";
+import { MdOutlineSecurity } from "react-icons/md";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { MdOutlineSupportAgent } from "react-icons/md";
+import { Row, Col } from "antd";
+import { Image } from "antd";
+import { FaChevronDown, FaAngleRight } from "react-icons/fa6";
+import { IoStar } from "react-icons/io5";
 import "../../../../styles/index.scss";
 
 const Landing = () => {
@@ -25,12 +25,15 @@ const Landing = () => {
          <div className='main tws-mt-20'>
             <div className='intro tws-w-full tws-h-[620px]'>
                <div className='intro_Text tws-text-center '>
-                  <h1 className='tws-text-5xl tws-font-bold'>MUA SẮM THẢ GA, KHÔNG LO GIÁ CẢ</h1>
+                  <h1 className=' tws-text-5xl tws-font-bold'>MUA SẮM THẢ GA, KHÔNG LO GIÁ CẢ</h1>
                   <p className='tws-text-4xl tws-pt-[30px]'>Tận hưởng nào</p>
                </div>
-               <ImageReveal />
+               <div>
+                  <ImageReveal />
+               </div>
+
                <div className='Icon Center'>
-                  <p>&lt;</p>
+                  <FaChevronDown  className="icon_d_r"/>
                </div>
             </div>
 
@@ -61,28 +64,28 @@ const Landing = () => {
                      <Col span={14} className='Col2 '>
                         <div className='Image'>
                            <div className='image_1 tws-w-[360px] tws-h-[360px]'>
-                              <p className='tws-absolute tws-top-[17%] tws-left-[9%] tws-text-center'>
+                              <p className='p tws-absolute tws-top-[17%] tws-left-[9%] tws-text-center'>
                                  Kiểm tra <br />
                                  nghiêm
                               </p>
                            </div>
-                           <div className='image_2 tws-absolute tws-top-0 tws-left-[61%] tws-w-[260px] tws-h-[190px]'>
-                              <p className='tws-absolute tws-top-[60%] tws-left-[10%] tws-text-[25px]'>
+                           <div className='image_2 tws-absolute tws-top-0 tws-left-[61%] tws-w-[240px] tws-h-[190px]'>
+                              <p className='p tws-absolute tws-top-[60%] tws-left-[10%] tws-text-[25px]'>
                                  Miễn phí
                                  <br /> vận chuyển
                               </p>
                            </div>
-                           <div className='image_3 tws-absolute tws-top-[35%] tws-left-[56%] tws-w-[160px] tws-h-[150px]'>
-                              <p className='tws-absolute tws-top-[65%] tws-left-[10%] tws-text-[18px]'>
+                           <div className='image_3 tws-absolute tws-top-[35%] tws-left-[57%] tws-w-[160px] tws-h-[150px]'>
+                              <p className='p tws-absolute tws-top-[65%] tws-left-[10%] tws-text-[18px]'>
                                  Vận chuyển
                                  <br /> nhanh chóng
                               </p>
                            </div>
                            <div className='image_4 tws-absolute tws-top-[58%] tws-left-[6%] tws-w-[235px] tws-h-[230px]'>
-                              <p className='tws-absolute tws-top-[45%] tws-left-[18%] tws-text-[30px]'>Trao tận tay</p>
+                              <p className='p tws-absolute tws-top-[45%] tws-left-[18%] tws-text-[30px]'>Trao tận tay</p>
                            </div>
-                           <div className='image_5 tws-absolute tws-top-[63%] tws-left-[45%] tws-w-[370px] tws-h-[230px]'>
-                              <p className='tws-absolute tws-top-[80%] tws-left-[10%] tws-text-[30px]'>
+                           <div className='image_5 tws-absolute tws-top-[63%] tws-left-[45%] tws-w-[345px] tws-h-[230px]'>
+                              <p className='p tws-absolute tws-top-[80%] tws-left-[10%] tws-text-[30px]'>
                                  Giao hàng tận nơi
                               </p>
                            </div>
@@ -128,7 +131,7 @@ const Landing = () => {
                      KÊNH HỖ TRỢ NHÀ BÁN HÀNG
                   </h1>
 
-                  <div className='support-card tws-flex tws-pt-[150px] tws-justify-between'>
+                  <div className='support-card tws-flex tws-pt-[150px] tws-justify-between  tws-items-center'>
                      <CardSupport
                         title='TRUNG TÂM HỖ TRỢ NHÀ BÁN'
                         describe='Đội ngũ chăm sóc nhiệt tình, chu đáo luôn sẵn sàng hỗ trợ'
@@ -143,7 +146,7 @@ const Landing = () => {
             </div>
             <div className='Review tws-bg-[#f5f2f7] tws-w-full '>
                <div className='Review-container container'>
-                  <h1 className='tws-text-4xl tws-font-bold'>NGƯỜI DÙNG NÓI GÌ VỀ SHOP</h1>
+                  <h1 className='h1 tws-text-4xl tws-font-bold'>NGƯỜI DÙNG NÓI GÌ VỀ SHOP</h1>
 
                   <div className='Review-card tws-flex'>
                      <CardReview
@@ -163,14 +166,14 @@ const Landing = () => {
                         date='23/10/2024'
                      />
                      <div className='Icon Center'>
-                        <p>&lt;</p>
+                        <FaAngleRight className="icon_d_r"/>
                      </div>
                   </div>
                </div>
             </div>
             <div className='Register tws-w-full  tws-flex tws-flex-col tws-justify-center tws-items-center tws-text-center'>
                <div className=''>
-                  <p>Đăng ký ngay để biết thêm chi tiết</p>
+                  <p className="p">Đăng ký ngay để biết thêm chi tiết</p>
                   <Button title='Đăng ký' />
                </div>
             </div>
