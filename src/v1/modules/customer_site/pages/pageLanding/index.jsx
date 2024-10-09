@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CardItem from "./components/cardItem";
 import Button from "./components/button";
-import CardSupport from "./components/cardSupport";
+import CardItem from "./components/cardItem";
 import CardReview from "./components/cardReview";
+import CardSupport from "./components/cardSupport";
 import ImageReveal from "./components/scrollReveal";
 import "./style.scss";
 
