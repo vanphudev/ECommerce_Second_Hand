@@ -1,9 +1,7 @@
-import React from 'react';
-import './components/styles/featuredCategories.scss';
-import { Container } from '@mui/material';
-import { Col, Row } from 'antd';
-
-
+import React from "react";
+import "./styles/featuredCategories.scss";
+import {Container} from "@mui/material";
+import {Col, Row} from "antd";
 
 const featuredCategories = () => {
 
@@ -72,7 +70,7 @@ const featuredCategories = () => {
     ]
     return ( 
             <div className="featured-categories">
-                
+
                     <Row>
                         <Col span={24}>
                             <h2 className='title-fc'>DANH MỤC NỔI BẬT</h2>
@@ -80,9 +78,9 @@ const featuredCategories = () => {
                         </Col>
 
                         {data.map((item) => (
-                        <Col xs={12} sm={8} md={6} lg={4} className='fc-item' key={item.id}>
+                        <Col span={4} className='fc-item'>
                             <div>
-                                <img src={item.img} alt={item.title} />
+                                <img src={item.img} alt="realme-c25s" />
                                 <p>{item.title}</p>
                             </div>
                         </Col>
@@ -90,23 +88,23 @@ const featuredCategories = () => {
 
                     </Row>
                     <Row className='event-day'>
-                        <Col xs={24} sm={12} md={6} className='left'>
+                        <Col span={6} className='left'>
                             <div>
                                 <h1>Giá Sốc⚡Hôm Nay</h1>
                             </div>
                         </Col>
-                        <Col xs={24} sm={12} md={10} className='between'>
+                        <Col span={10} className='between'>
                             <div>
                                 <p>Chương trình đã hết hạn</p>
                             </div>
                         </Col>
-                        <Col xs={24} sm={12} md={8} className='right'>
+                        <Col span={8} className='right'>
                             <div>
                                 <h3>XEM TẤT CẢ +</h3>
                             </div>
                         </Col>
                     </Row>
-                
+           
 
             </div>
      );

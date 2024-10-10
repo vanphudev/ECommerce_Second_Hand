@@ -1,5 +1,5 @@
 import React from 'react';
-import './components/styles/skinCare.scss';
+import './styles/skinCare.scss';
 import { Container } from '@mui/material';
 import { Col, Row } from 'antd';
 

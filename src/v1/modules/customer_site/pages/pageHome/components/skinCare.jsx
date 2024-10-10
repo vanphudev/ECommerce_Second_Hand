@@ -1,18 +1,18 @@
-import React from 'react';
-import './components/styles/skinCare.scss';
-import { Container } from '@mui/material';
-import { Col, Row } from 'antd';
+import React from "react";
+import "./styles/skinCare.scss";
+import {Container} from "@mui/material";
+import {Col, Row} from "antd";
 
 function skinCare() {
     return ( 
             <div className="skin-care">
- 
+                
                     <Row>
                         <Col span={24} className='title-skinCare'>
                             <h2 className='title-fc'>SKIN CARE</h2>
                             <hr/>
                         </Col>
-                        <Col xl={7} md={0} sm={0} xs={0} lg={7} >
+                        <Col span={7} >
                             <img src="https://bizweb.dktcdn.net/100/472/852/themes/888810/assets/image_tab1.png?1710378441395" alt="son-moi"/>
                             <div className='item-search'>
                                 <button className='btn-search'>Kem Chống Nắng</button>
@@ -21,7 +21,7 @@ function skinCare() {
                                 <button className='btn-search'>Sữa rửa mặt</button>
                             </div>
                         </Col>
-                        <Col xl={17} md={24} sm={24} xs={24} lg={17}>
+                        <Col span={17}>
                             <Row>
                                 <Col span={24} className='option-skinCare'>
                                     <button className='btn-active'>Sữa rửa mặt</button>
@@ -41,7 +41,7 @@ function skinCare() {
                             </Row>
                         </Col>
                     </Row>
-      
+               
         </div>
      );
 }

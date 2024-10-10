@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import FeaturedCategories from "./featuredCategories.jsx";
-import SkinCare from "./skinCare.jsx";
-import Makeup from "./makeUp.jsx";
+import FeaturedCategories from "./components/featuredCategories.jsx";
+import SkinCare from "./components/skinCare.jsx";
+import Makeup from "./components/makeUp.jsx";
 import "./components/styles/home.scss";
 const PageHome = () => {
    return (
