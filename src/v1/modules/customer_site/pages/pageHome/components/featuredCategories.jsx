@@ -1,7 +1,9 @@
-import React from "react";
-import "./styles/featuredCategories.scss";
-import {Container} from "@mui/material";
-import {Col, Row} from "antd";
+import React from 'react';
+import './components/styles/featuredCategories.scss';
+import { Container } from '@mui/material';
+import { Col, Row } from 'antd';
+
+
 
 const featuredCategories = () => {
 
@@ -70,7 +72,7 @@ const featuredCategories = () => {
     ]
     return ( 
             <div className="featured-categories">
-
+                <Container>
                     <Row>
                         <Col span={24}>
                             <h2 className='title-fc'>DANH MỤC NỔI BẬT</h2>
@@ -104,7 +106,7 @@ const featuredCategories = () => {
                             </div>
                         </Col>
                     </Row>
-           
+                </Container>
 
             </div>
      );

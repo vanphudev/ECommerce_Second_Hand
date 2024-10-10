@@ -8,10 +8,10 @@ const PageHome = () => {
    return (
       <div className="Home">
          <FeaturedCategories />
-         <SkinCare/>
          <Makeup/>
+         <SkinCare/>
          <Link to={import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_ABOUT_TEAM07}>Thông tin Team 07</Link>
-      </div>
+      </>
    );
 };
 
