@@ -1,0 +1,149 @@
+.contact-bodywrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px;
+
+    .container {
+        max-width: 1125px;
+        margin: 0 auto;
+    }
+
+    .layout-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+
+        @media (min-width: 992px) {
+            align-items: stretch; // Đảm bảo các phần tử con được kéo giãn chiều cao bằng nhau
+        }
+    }
+
+    .contact-info-wrapper,
+    .form-contact-wrapper {
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: 48%;
+        }
+
+        .contact-header,
+        .form-header {
+            position: relative;
+            font-size: 15px;
+            font-weight: 700;
+            background: #55018d;
+            color: #fff;
+            padding: 10px 17px;
+            text-transform: uppercase;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 16px;
+        }
+    }
+
+    .contact-info,
+    .form-contact {
+        background-color: #ffffff;
+        border: 1px solid #55018d;
+        padding: 24px;
+        border-radius: 0px 0px 8px 8px;
+        width: 100%;
+        box-sizing: border-box; // Đảm bảo kích thước bao gồm padding và border
+        height: 335px; // Đảm bảo phần tử này chiếm toàn bộ chiều cao của container cha
+    }
+
+    .map-wrapper {
+        border-radius: 8px;
+        overflow: hidden; // Đảm bảo không có viền xấu xung quanh iframe
+        width: 100%;
+
+        iframe {
+            margin-left: 10px;
+            width: 1108px;
+            height: 450px;
+        }
+    }
+
+    .info-description {
+        margin-bottom: 16px;
+    }
+
+    .address-title {
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 8px;
+    }
+
+    .contact-details {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 16px 0;
+
+        li {
+            margin-bottom: 8px;
+
+            a {
+                color: #55018d;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .see-store {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 8px 16px;
+        background-color: #55018d;
+        color: #ffffff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #fac126;
+        }
+    }
+
+    .form-contact {
+        .group_contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .form-input,
+            .form-textarea {
+                border: 1px solid #e6e6e6;
+                border-bottom: 2px solid #55018d;
+                padding: 12px;
+                font-size: 1rem;
+                outline: none;
+                border-radius: 8px;
+
+            }
+
+            .form-textarea {
+
+                resize: vertical;
+            }
+
+            .btn-submit {
+                background: #55018d;
+                color: #fff;
+                border: initial;
+                padding: 0 20px;
+                line-height: 35px;
+                font-size: 14px;
+                border-radius: 8px;
+                width: 122px;
+
+                &:hover {
+                    background-color: #fac126;
+                }
+            }
+        }
+    }
+}
