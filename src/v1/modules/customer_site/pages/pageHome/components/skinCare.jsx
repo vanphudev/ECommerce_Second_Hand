@@ -1,12 +1,12 @@
 import React from 'react';
-import './components/styles/skinCare.scss';
+import './styles/skinCare.scss';
 import { Container } from '@mui/material';
 import { Col, Row } from 'antd';
 
 function skinCare() {
     return ( 
             <div className="skin-care">
-                <Container>
+                
                     <Row>
                         <Col span={24} className='title-skinCare'>
                             <h2 className='title-fc'>SKIN CARE</h2>
@@ -41,7 +41,7 @@ function skinCare() {
                             </Row>
                         </Col>
                     </Row>
-                </Container>
+     
         </div>
      );
 }
