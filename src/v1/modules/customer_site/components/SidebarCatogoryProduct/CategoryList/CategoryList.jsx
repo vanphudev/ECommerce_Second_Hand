@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import '../style/CategoryList.scss';
+import './CategoryList.scss';
 const { SubMenu } = Menu;
 
 const CategoryList = () => {
