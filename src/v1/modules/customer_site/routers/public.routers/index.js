@@ -3,9 +3,6 @@ import DashBroad from "../../layouts/LayoutHome/dashBroad";
 import PageNotFound from "../../pages/pageNotFound/";
 import FeatureBooking from "../../pages/pageFeatureBooking";
 import TabOrderManager from "../../pages/pageTabOrderManager";
-
-import TabOrderManager from "../../pages/pageTabOrderManager";
-
 const Categories = React.lazy(() => import("../../pages/pageCategories"));
 const Home = React.lazy(() => import("../../pages/pageHome"));
 const SellerCentre = React.lazy(() => import("../../pages/pageSellerCentre"));
