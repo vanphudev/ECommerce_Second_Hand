@@ -10,6 +10,8 @@
   display: flex;
   margin-bottom: 20px;
 
+  overflow-x: auto;
+
   button {
     all: unset;
     color: #fff;
@@ -21,6 +23,8 @@
     border-radius: 5px;
     margin-left: 10px;
     transition: all 0.5s;
+    white-space: nowrap;
+    width: auto;
 
     &:hover {
       background-color: #fff;
@@ -70,5 +74,13 @@
       background-color: #55018d;
       color: #fff;
     }
+  }
+}
+
+.banner-right {
+  text-align: right;
+  .item-search {
+    padding-left: 30px;
+    text-align: left;
   }
 }
