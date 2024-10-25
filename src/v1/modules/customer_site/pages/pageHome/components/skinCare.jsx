@@ -41,7 +41,7 @@ function skinCare() {
                             </Row>
                         </Col>
                     </Row>
-     
+      
         </div>
      );
 }

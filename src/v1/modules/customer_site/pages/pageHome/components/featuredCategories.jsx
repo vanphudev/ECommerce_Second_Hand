@@ -72,7 +72,7 @@ const featuredCategories = () => {
     ]
     return ( 
             <div className="featured-categories">
- 
+                
                     <Row>
                         <Col span={24}>
                             <h2 className='title-fc'>DANH MỤC NỔI BẬT</h2>
@@ -106,7 +106,7 @@ const featuredCategories = () => {
                             </div>
                         </Col>
                     </Row>
-    
+                
 
             </div>
      );
