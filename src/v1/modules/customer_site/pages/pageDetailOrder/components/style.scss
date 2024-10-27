@@ -1,0 +1,33 @@
+$border_color: #bfbfbf;
+$bg_btn: #bfbfbf;
+
+$text_color: #55018d;
+$text_color2: #26aa99;
+
+.border {
+  border: 1px solid $border_color;
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.icon_color {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+.menu_main {
+  border: 1px solid #6401a6;
+  border-radius: 5px;
+  .ant-menu-item {
+    height: 60px;
+  }
+}
+
+

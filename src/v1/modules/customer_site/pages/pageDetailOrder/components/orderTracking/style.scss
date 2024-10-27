@@ -1,0 +1,50 @@
+$border_color: #bfbfbf;
+$bg_btn: #bfbfbf;
+
+$text_color: #55018d;
+$text_color2: #26aa99;
+
+.order-stepper {
+  .stepper {
+    .stepper__step {
+      z-index: 1;
+      &.stepper__step_finish .stepper__step_icon {
+        border-color: #2dc258;
+        color: #2dc258;
+      }
+
+      &.stepper__step_pending .stepper__step_icon {
+        background-color: #2dc258;
+        color: #fff;
+        border-color: #2dc258;
+      }
+
+      &.stepper__step_upcoming .stepper__step_icon {
+        border-color: #e0e0e0;
+        color: #e0e0e0;
+      }
+    }
+
+    .stepper__step_icon {
+      border: 4px solid #e0e0e0;
+      border-radius: 50%;
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stepper__line {
+      .stepper__line_background,
+      .stepper__line_foreground {
+        background: rgb(224, 224, 224);
+        height: 100%;
+        margin: 0 70px;
+        position: absolute;
+        width: calc(100% - 140px);
+      }
+
+      .stepper__line_foreground {
+        background: #2dc258;
+        transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+}

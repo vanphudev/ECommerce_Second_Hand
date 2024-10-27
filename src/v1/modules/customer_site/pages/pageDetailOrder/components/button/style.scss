@@ -1,0 +1,51 @@
+$border_color: #bfbfbf;
+$bg_btn: #bfbfbf;
+$bg: #55018d;
+
+
+.btn_xn_lh {
+  padding: 7px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.btn_main {
+
+  .btnConfirm {
+    padding: 15px 10px;
+    font-size: 12px;
+
+    .btnConfirm_btn {
+      .btn_xn_lh {
+        color: #fff;
+        border: none;
+        background: $bg_btn;
+        width: 200px;
+      }
+      .btn_Evaluate {
+        background: $bg;
+        color: #fff;
+      }
+    }
+  }
+
+  .highlight {
+    .btnConfirm_btn .btn_xn_lh {
+      background: $bg;
+      color: #fff;
+    }
+  }
+
+  .btn_Contact {
+    margin-top: 15px;
+    padding: 15px 10px;
+    font-size: 12px;
+    justify-content: flex-end;
+
+    .btn_xn_lh {
+      border: 1px solid $border_color;
+      background: #fff;
+    }
+  }
+}

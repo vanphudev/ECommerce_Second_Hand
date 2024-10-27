@@ -15,6 +15,7 @@ const Header = () => {
    };
    const landingLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LANDING_DEFAULT;
    const cartLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CART;
+   const detailOrderLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAIL_ORDER;
    return (
       <>
          <div className="header">
@@ -51,8 +52,10 @@ const Header = () => {
                            <DropdownMenu link={cartLink} />
 
                         </div>
-                        <div className="info-main">
-                           <FaUser />
+                        <div className="info-icon">
+                           <Link to={detailOrderLink} >
+                              <FaUser />
+                           </Link>
                         </div>
                      </div>
                   </div>
