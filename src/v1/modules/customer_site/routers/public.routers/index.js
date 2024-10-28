@@ -13,7 +13,7 @@ const BuyingGuide = React.lazy(() => import("../../pages/pageBuyingGuide"));
 const PersonalInformationSecurity = React.lazy(() => import("../../pages/pagePersonalInformationSecurity"));
 const GiftOfGratitude = React.lazy(() => import("../../pages/pageGiftOfGratitude"));
 const Contact = React.lazy(() => import("../../pages/pageContact"));
-
+const Profile = React.lazy(() => import("../../pages/pageProfile"));
 
 
 const URL_HOME_DEFAULT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME_DEFAULT;
@@ -29,7 +29,7 @@ const URL_BuyingGuide = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_Buying
 const URL_PersonalInformationSecurity = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_PersonalInformationSecurity;
 const URL_GiftOfGratitude = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_GiftOfGratitude;
 const URL_Contact = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_Contact;
-
+const URL_Profile = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_Profile;
 const PublicRoutes = [
    {
       path: URL_HOME_DEFAULT,
@@ -84,6 +84,10 @@ const PublicRoutes = [
          {
             path: URL_GiftOfGratitude,
             element: <GiftOfGratitude />,
+         },
+         {
+            path: URL_Profile,
+            element: <Profile />,
          },
          {
             path: URL_Contact,
