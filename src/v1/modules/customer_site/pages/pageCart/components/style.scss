@@ -1,0 +1,43 @@
+$color: #55018d;
+$backgound: #9f9e9f68;
+$color_red: #ff1616;
+
+.p1 {
+  color: #bc80fc;
+  border: 1px solid #bc80fc;
+  border-radius: 3px;
+  background: #fff;
+}
+.cart_section_product {
+  .cart_section_product_item {
+    border: 1px solid #b4b4b4;
+    .item {
+      .checkbox{
+        .p1{
+          background: #bc80fc;
+          color: #fff;
+        }
+      }
+      .gutter-row3 {
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          background: $color;
+          color: #fff;
+          border: none;
+          border-radius: 2px;
+        }
+        input {
+          border: 1px solid rgb(145, 145, 145);
+        }
+      }
+      .gutter-row5 {
+        color: $color_red;
+      }
+    }
+  }
+}
