@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import "./style.scss";

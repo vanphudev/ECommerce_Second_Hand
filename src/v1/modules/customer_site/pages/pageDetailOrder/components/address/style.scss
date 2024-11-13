@@ -1,0 +1,30 @@
+$border_color: #bfbfbf;
+$bg_btn: #bfbfbf;
+
+$text_color: #55018d;
+$text_color2: #26aa99;
+
+
+.Address_main {
+  padding: 20px;
+  .content {
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    min-height: 150px;
+  }
+  .compacted {
+    max-height: 0;
+  }
+
+  .toggle-btn {
+    color: $text_color;
+    background: none;
+  }
+
+  .completed {
+    color: #bfbfbf;
+  }
+  .finish {
+    color: $text_color2;
+  }
+}
