@@ -1,0 +1,51 @@
+.PersonalInformationSecurity-bodywrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* Căn giữa toàn bộ giao diện */
+    padding: 0 15px;
+    /* Đảm bảo không gian trống ở hai bên */
+    font-size: 14px;
+}
+
+/* CSS cho .membership-container */
+.PersonalInformationSecurity-container {
+    max-width: 1125px;
+    width: 100%;
+    /* Đảm bảo chiếm hết chiều rộng trong trường hợp nhỏ hơn */
+    margin: 0 auto;
+    /* Căn giữa nội dung chính giữa */
+}
+
+.PersonalInformationSecurity-page-title h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 2.5rem;
+}
+
+.PersonalInformationSecurity-page-title a {
+    transition: all 0.4s ease;
+    color: #231f20;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.PersonalInformationSecurity-content-page p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.PersonalInformationSecurity-content-page strong {
+    font-weight: bolder;
+}
+
+.PersonalInformationSecurity-content-page ul {
+    padding-left: 20px;
+    /* Để căn chỉnh danh sách */
+    list-style-type: disc;
+    margin-bottom: 1rem;
+}
+
+.PersonalInformationSecurity-content-page ul li {
+    margin-bottom: 0.5rem;
+}

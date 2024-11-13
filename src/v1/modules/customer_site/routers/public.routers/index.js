@@ -10,8 +10,20 @@ const DetailsProduct = React.lazy(() =>
   import("../../pages/pageDetailsProduct")
 );
 const Landing = React.lazy(() => import("../../pages/pageLanding"));
+
+const MembershipPolicy = React.lazy(() => import("../../pages/pageMembershipPolicy"));
+const PaymentPolicy = React.lazy(() => import("../../pages/pagePaymentPolicy"));
+const BuyingGuide = React.lazy(() => import("../../pages/pageBuyingGuide"));
+const PersonalInformationSecurity = React.lazy(() => import("../../pages/pagePersonalInformationSecurity"));
+const GiftOfGratitude = React.lazy(() => import("../../pages/pageGiftOfGratitude"));
+const Contact = React.lazy(() => import("../../pages/pageContact"));
+const Profile = React.lazy(() => import("../../pages/pageProfile"));
+
+
+
 const Cart = React.lazy(() => import("../../pages/pageCart"));
 const DetailOrder = React.lazy(() => import("../../pages/pageDetailOrder"));
+
 const URL_HOME_DEFAULT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME_DEFAULT;
 
 const URL_HOME_DEFAULT = import.meta.env
@@ -26,8 +38,18 @@ const URL_SELLER_CENTRE = import.meta.env
 const URL_DETAILS_PRODUCT = import.meta.env
   .VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAILS_PRODUCT;
 const URL_LANDING = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LANDING;
+
+const URL_MembershipPolicy = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_MembershipPolicy;
+const URL_PaymentPolicy = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_PaymentPolicy;
+const URL_BuyingGuide = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_BuyingGuide;
+const URL_PersonalInformationSecurity = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_PersonalInformationSecurity;
+const URL_GiftOfGratitude = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_GiftOfGratitude;
+const URL_Contact = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_Contact;
+const URL_Profile = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_Profile;
+
 const URL_CART = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CART;
 const URL_DETAIL_ORDER = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAIL_ORDER;
+
 const PublicRoutes = [
    {
       path: URL_HOME_DEFAULT,
@@ -64,6 +86,34 @@ const PublicRoutes = [
             element: <DetailsProduct />,
          },
          {
+
+            path: URL_MembershipPolicy,
+            element: <MembershipPolicy />,
+         },
+         {
+            path: URL_PaymentPolicy,
+            element: <PaymentPolicy />,
+         },
+         {
+            path: URL_BuyingGuide,
+            element: <BuyingGuide />,
+         },
+         {
+            path: URL_PersonalInformationSecurity,
+            element: <PersonalInformationSecurity />,
+         },
+         {
+            path: URL_GiftOfGratitude,
+            element: <GiftOfGratitude />,
+         },
+         {
+            path: URL_Profile,
+            element: <Profile />,
+         },
+         {
+            path: URL_Contact,
+            element: <Contact />,
+
             // Routes for: Cart
             path: URL_CART,
             element: <Cart />,
@@ -72,6 +122,7 @@ const PublicRoutes = [
             // Routes for: Cart
             path: URL_DETAIL_ORDER,
             element: <DetailOrder />,
+
          },
          {
             // Routes for: NotFound
