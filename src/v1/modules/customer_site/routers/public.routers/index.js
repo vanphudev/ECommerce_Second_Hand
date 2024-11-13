@@ -2,7 +2,7 @@ import React from "react";
 import DashBroad from "../../layouts/LayoutHome/dashBroad";
 import PageNotFound from "../../pages/pageNotFound/";
 import FeatureBooking from "../../pages/pageFeatureBooking";
-
+import TabOrderManager from "../../pages/pageTabOrderManager";
 const Categories = React.lazy(() => import("../../pages/pageCategories"));
 const Home = React.lazy(() => import("../../pages/pageHome"));
 const SellerCentre = React.lazy(() => import("../../pages/pageSellerCentre"));
@@ -133,6 +133,8 @@ const PublicRoutes = [
    },
 const URL_FEATURE_BOOKING = import.meta.env
   .VITE_ROUTER_MODULES_CUSTOMER_SITE_FEATURE_BOOKING;
+const URL_ORDER_MANAGER = import.meta.env
+  .VITE_ROUTER_MODULES_CUSTOMER_SITE_ORDER_MANAGER;
 
 const PublicRoutes = [
   {
@@ -173,6 +175,11 @@ const PublicRoutes = [
         // Routes for: DetailsProduct
         path: URL_FEATURE_BOOKING,
         element: <FeatureBooking />,
+      },
+      {
+        // Routes for: DetailsProduct
+        path: URL_ORDER_MANAGER,
+        element: <TabOrderManager />,
       },
       {
         // Routes for: NotFound
