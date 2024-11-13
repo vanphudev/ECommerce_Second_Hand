@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 1440px;
+    background-color: #f0f0f5;
+}
+
+.container {
+    width: 1125px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /* Để các phần tử con nằm dọc theo chiều dọc */
+    flex: 1;
+    margin-left: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    line-height: 24px;
+}
+
+h2 span {
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h2 span:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    background: #fac126;
+}
+
+p {
+    margin-bottom: 5px;
+    color: black;
+}
+
+.profile-content {
+    width: 841px;
+    /* Đặt chiều rộng cố định */
+    height: 541px;
+    /* Đặt chiều cao cố định */
+    padding: 20px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.profile-form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.avatar-section {
+    margin-right: 70px;
+    text-align: center;
+}
+
+.avatar img {
+    width: 228px;
+    height: 223px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #eee;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.choose-avatar {
+    width: 160px;
+    height: 45px;
+    margin-left: 60px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    border: 1px solid #BFBFBF;
+}
+
+.avatar-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.info-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    width: 150px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: left;
+}
+
+.colon {
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group select {
+    width: calc(100% - 175px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.update-button {
+    padding: 10px 20px;
+    background-color: #D4963D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 120px;
+    align-self: center;
+}

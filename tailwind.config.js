@@ -35,6 +35,7 @@ export default {
       fontFamily: {
          sans: ["Nunito", "sans-serif"],
          serif: ["Nunito", "serif"],
+         inter: ["Inter", "serif"]
       },
       extend: {
          spacing: {
