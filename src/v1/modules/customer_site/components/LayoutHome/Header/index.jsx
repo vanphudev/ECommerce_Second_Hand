@@ -16,6 +16,7 @@ const Header = () => {
    const landingLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LANDING_DEFAULT;
    const cartLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CART;
    const detailOrderLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAIL_ORDER;
+   const loginLink = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LOGIN;
    return (
       <>
          <div className="header">
@@ -38,6 +39,11 @@ const Header = () => {
                               Landing
                            </Link>
                         </li>
+                        <li>
+                           <Link to={loginLink} className="menu-item">
+                              Login
+                           </Link>
+                        </li>
                      </div>
                      <div className="menu-icon">
                         <div>
@@ -57,6 +63,7 @@ const Header = () => {
                               <FaUser />
                            </Link>
                         </div>
+                        
                      </div>
                   </div>
                </div>
