@@ -2,100 +2,100 @@ $color: #55018d;
 $backgound: #9f9e9f68;
 $color_red: #ff1616;
 
-
 .width_page {
-  max-width: 1440px;
-  margin: 0 auto;
+   max-width: 1440px;
+   margin: 0 auto;
 }
 
 .container {
-  max-width: 1125px;
-  margin: 0 auto;
+   max-width: 1125px;
+   margin: 0 auto;
+   flex-direction: column;
 }
+
 .center {
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 .input {
-  width: 17px;
-  height: 17px;
+   width: 17px;
+   height: 17px;
 }
-
 
 .price_p2 {
-  color: $color;
-  font-weight: 600;
-  font-size: 17px;
+   color: $color;
+   font-weight: 600;
+   font-size: 17px;
 }
 .gutter-row {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  .input {
-    margin-right: 15px;
-    color: $color;
-  }
+   font-size: 16px;
+   font-weight: 600;
+   text-align: center;
+   .input {
+      margin-right: 15px;
+      color: $color;
+   }
 }
 
 .j_center {
-  justify-content: center;
+   justify-content: center;
 }
 .cart_background {
-  background-color: $backgound;
-  height: 50px;
-  border-radius: 10px;
-  padding: 12px 0px;
-  margin: auto;
+   background-color: $backgound;
+   height: 50px;
+   border-radius: 10px;
+   padding: 12px 0px;
+   margin: auto;
 }
 
 .row {
-  margin: auto;
-  padding: 0 20px;
+   margin: auto;
+   padding: 0 20px;
 }
 
 .cart_title {
-  .cart_search {
-    .image {
-      p {
-        background: $color;
+   .cart_search {
+      .image {
+         p {
+            background: $color;
+         }
+         span {
+            color: $color;
+         }
       }
-      span {
-        color: $color; 
-      }
-    }
-    .search-container {
-      input[type="text"] {
-        border: 1px solid $color;
-        border-radius: 5px 0 0 5px;
-      }
+      .search-container {
+         input[type="text"] {
+            border: 1px solid $color;
+            border-radius: 5px 0 0 5px;
+         }
 
-      button {
-        background: $color;
+         button {
+            background: $color;
+         }
       }
-    }
-  }
+   }
 }
 .cart_section {
-  .cart_section_pay {
-    .Row {
-      .p2 {
-        color: $color_red;
+   .cart_section_pay {
+      .Row {
+         .p2 {
+            color: $color_red;
+         }
+         .p3 {
+            span {
+               color: $color_red;
+            }
+         }
+         .p4 {
+            color: $color_red;
+         }
+         .p5 {
+            button {
+               background: $color;
+               padding: 5px 20px;
+            }
+         }
       }
-      .p3 {
-        span {
-          color: $color_red;
-        }
-      }
-      .p4 {
-        color: $color_red;
-      }
-      .p5 {
-        button {
-          background: $color;
-          padding: 5px 20px;
-        }
-      }
-    }
-  }
+   }
 }

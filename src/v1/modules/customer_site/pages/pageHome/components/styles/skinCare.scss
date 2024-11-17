@@ -1,86 +1,165 @@
+.slick-slider {
+   cursor: pointer;
+   &:hover {
+      .slick-prev {
+         opacity: 1;
+      }
+      .slick-next {
+         opacity: 1;
+      }
+   }
+   .slick-dots {
+      .slick-active {
+         button {
+            opacity: 1;
+            border-radius: 20px;
+         }
+         transition: all 0.09s;
+         background-color: #55018d;
+         border-radius: 20px;
+         width: 25px;
+      }
+      li {
+         width: 15px;
+         height: 15px;
+         button {
+            width: 15px;
+            height: 15px;
+            background-color: #55018d;
+            opacity: 0.5;
+            border-radius: 50%;
+            &:hover {
+               opacity: 1;
+            }
+         }
+         button::before {
+            display: none;
+         }
+      }
+   }
+   .slick-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0px;
+      z-index: 1000;
+      width: 25px;
+      box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+      height: 60px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      opacity: 0.1;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   .slick-prev:before {
+      content: "";
+   }
+   .slick-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0px;
+      z-index: 1000;
+      width: 25px;
+      box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+      height: 60px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      opacity: 0.1;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   .slick-next:before {
+      content: "";
+   }
+}
+
 .skin-care {
-  margin-top: 50px;
+   margin-top: 50px;
 }
 .title-skinCare {
-  margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 .option-skinCare {
-  background-color: #55018d;
-  padding: 10px;
-  display: flex;
-  margin-bottom: 20px;
+   background-color: #55018d;
+   padding: 10px;
+   display: flex;
+   margin-bottom: 20px;
 
-  overflow-x: auto;
+   overflow-x: auto;
 
-  button {
-    all: unset;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: all 0.5s;
-    white-space: nowrap;
-    width: auto;
+   button {
+      all: unset;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+      transition: all 0.5s;
+      white-space: nowrap;
+      width: auto;
 
-    &:hover {
+      &:hover {
+         background-color: #fff;
+         color: #fac126;
+      }
+   }
+   .btn-active {
       background-color: #fff;
       color: #fac126;
-    }
-  }
-  .btn-active {
-    background-color: #fff;
-    color: #fac126;
-  }
+   }
 }
 .item-search {
-  width: 90%;
-  .btn-search {
-    all: unset;
-    border-radius: 100px;
-    border: 1px solid #fac126;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: all 0.5s;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-left: 10px;
+   width: 90%;
+   .btn-search {
+      all: unset;
+      border-radius: 100px;
+      border: 1px solid #fac126;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: all 0.5s;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-left: 10px;
 
-    &:hover {
-      background-color: #fac126;
-      color: #fff;
-    }
-  }
+      &:hover {
+         background-color: #fac126;
+         color: #fff;
+      }
+   }
 }
 
 .btn-view-all {
-  text-align: center;
-  button {
-    all: unset;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: 1px solid #55018d;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: all 0.5s;
-    text-align: center;
+   text-align: center;
+   button {
+      all: unset;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #55018d;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+      transition: all 0.5s;
+      text-align: center;
 
-    &:hover {
-      background-color: #55018d;
-      color: #fff;
-    }
-  }
+      &:hover {
+         background-color: #55018d;
+         color: #fff;
+      }
+   }
 }
 
 .banner-right {
-  text-align: right;
-  .item-search {
-    padding-left: 30px;
-    text-align: left;
-  }
+   text-align: right;
+   .item-search {
+      padding-left: 30px;
+      text-align: left;
+   }
 }

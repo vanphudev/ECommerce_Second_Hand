@@ -1,9 +1,16 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import "../styles/framDetails.scss";
 import {Button} from "antd";
 import Logo from "../assets/icons/logo-amazing-tech-v2.png";
 import {AiFillShop} from "react-icons/ai";
 export default function FrameBrand() {
+   const navigate = useNavigate();
+
+   const handleViewSeller = () => {
+      navigate(import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_SELLER_CENTRE);
+   };
+
    return (
       <>
          <div className='frame-details'>
@@ -25,7 +32,10 @@ export default function FrameBrand() {
                            }}></div>
                      </div>
                      <div className='frame-brand__view'>
-                        <Button className='btn-brand__view' icon={<AiFillShop style={{fontSize: "20px"}} />}>
+                        <Button
+                           onClick={handleViewSeller}
+                           className='btn-brand__view'
+                           icon={<AiFillShop style={{fontSize: "20px"}} />}>
                            Xem shop
                         </Button>
                      </div>

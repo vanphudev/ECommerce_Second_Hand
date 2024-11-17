@@ -1,15 +1,91 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import {Button} from "antd";
+import {SlArrowLeft, SlArrowRight} from "react-icons/sl";
 import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import Intro_01 from "../assets/icons/intro_01.png";
 import Intro_02 from "../assets/icons/intro_02.png";
 import Intro_03 from "../assets/icons/intro_03.png";
 import Intro_04 from "../assets/icons/intro_04.png";
 import Sale_Intro from "../assets/icons/saleintro.png";
-import Product_01 from "../assets/Images/ss-product-01.png";
 import "../styles/frameSections.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const images = [
+   "https://nongtrailamdep.com/uploads/shops/2020_02/206061-extra1.jpg",
+   "https://sg-live-01.slatic.net/p/2ca21cdb97b812ae0234964170e28ba7.png_525x525q80.jpg",
+   "https://bizweb.dktcdn.net/thumb/1024x1024/100/480/056/products/z4955208573493-dcd7f485e4869c1b1c882ca660fccd68-1702030526198-1711619503597.jpg?v=1711619512367",
+   "https://media.hcdn.vn/catalog/product/s/u/sua-rua-mat-tay-te-bao-chet-tra-xanh-lam-giam-mun-dau-den-st-ives-170g-1679385590_img_680x680_d30c8d_fit_center.jpg",
+   "https://mifashop.net/wp-content/uploads/2019/05/sua-rua-mat-tay-te-bao-chet-st-ives-blackhead-clearing-green-tea-and-bamboo-scrub-170g-03.jpg",
+];
 
 const Frameitems = () => {
+   function SampleNextArrow(props) {
+      const {className, style, onClick} = props;
+      return (
+         <div className={className} style={{display: "block", background: "#55018D"}} onClick={onClick}>
+            <SlArrowRight
+               style={{
+                  fontSize: "20px",
+                  color: "white",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+               }}
+            />
+         </div>
+      );
+   }
+   function SamplePrevArrow(props) {
+      const {className, style, onClick} = props;
+      return (
+         <div className={className} style={{display: "block", background: "#55018D"}} onClick={onClick}>
+            <SlArrowLeft
+               style={{
+                  fontSize: "20px",
+                  color: "white",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+               }}
+            />
+         </div>
+      );
+   }
+   const [nav1, setNav1] = useState(null);
+   const [nav2, setNav2] = useState(null);
+   const sliderRef1 = useRef(null);
+   const sliderRef2 = useRef(null);
+
+   useEffect(() => {
+      setNav1(sliderRef1.current);
+      setNav2(sliderRef2.current);
+   }, []);
+
+   const settingsMain = {
+      asNavFor: nav2,
+      ref: sliderRef1,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: false,
+   };
+
+   const settingsThumbs = {
+      asNavFor: nav1,
+      ref: sliderRef2,
+      slidesToShow: 4,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      swipeToSlide: true,
+      focusOnSelect: true,
+      infinite: true,
+   };
    const [quantity, setQuantity] = useState(1);
    const handleMinus = () => {
       if (quantity === 1) return;
@@ -23,7 +99,13 @@ const Frameitems = () => {
       <>
          <div className='frame-item tws-grid tws-grid-cols-[460px_365px_270px] tws-gap-3'>
             <div className='frame-item__img tws-relative'>
-               <img src={Product_01} alt='Sản phẩm 01' style={{minWidth: "100%"}} />
+               <Slider {...settingsMain}>
+                  {images.map((image, index) => (
+                     <div key={index}>
+                        <img src={image} alt={`slide-${index}`} style={{width: "100%", height: "auto"}} />
+                     </div>
+                  ))}
+               </Slider>
                <div
                   className='tws-absolute tws-bottom-32 tws-left-0'
                   style={{
@@ -40,6 +122,24 @@ const Frameitems = () => {
                      <span style={{color: "#ef1104", fontWeight: "bold", fontSize: "24px"}}> 100</span>
                   </div>
                </div>
+               <div className='tws-mb-5'></div>
+               <Slider {...settingsThumbs}>
+                  {images.map((image, index) => (
+                     <div key={index}>
+                        <img
+                           src={image}
+                           alt={`thumb-${index}`}
+                           style={{
+                              width: "100%",
+                              height: "70px",
+                              objectFit: "cover",
+                              borderRadius: "5px",
+                              border: "1px solid #ddd",
+                           }}
+                        />
+                     </div>
+                  ))}
+               </Slider>
             </div>
             <div className='tws-container tws-flex tws-flex-col tws-gap-y-3'>
                <div className='frame-item__name-product'>Sữa Rửa Mặt St.Ives Tẩy Tế Bào Chết Trà Xanh Ngừa Mụn</div>

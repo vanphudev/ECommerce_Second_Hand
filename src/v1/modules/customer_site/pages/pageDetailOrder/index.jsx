@@ -1,69 +1,64 @@
-import React, { useState } from "react";
-import MenuDO from "./components/menu.js";
+import React, {useState} from "react";
 import Title from "./components/title.js";
+import {Select, Divider} from "antd";
 import ButtonConfirm from "./components/button/buttonConfirm.js";
 import Address from "./components/address/address.js";
 import ItemProduct from "./components/itemProduct/itemProduct.js";
 import OrderTracking from "./components/orderTracking/orderTracking.js";
 import TotalPayment from "./components/table/totalPayment.js";
-import { Col, Row } from 'antd';
+import MenuTitle from "../../components/MenuTitle/MenuTitle.jsx";
+
 const DetailOrder = () => {
-    const [selectedOption, setSelectedOption] = useState(0);
-    const [showBuyBack, setShowBuyBack] = useState(false);
-    const [showEvaluate, setShowEvaluate] = useState(false);
-    const handleOptionChange = (event) => {
-        setSelectedOption(Number(event.target.value));
-    };
+   const [selectedOption, setSelectedOption] = useState(0);
+   const [showBuyBack, setShowBuyBack] = useState(false);
+   const [showEvaluate, setShowEvaluate] = useState(false);
+   const handleOptionChange = (value) => {
+      setSelectedOption(value);
+   };
 
-    const handleConfirmClick = () => {
-        if (selectedOption === 3) {
-            alert("Cảm ơn bạn đã đặt hàng");
-            setSelectedOption(4);
-            setShowBuyBack(true);
-            setShowEvaluate(true);
-        }
-    };
+   const handleConfirmClick = () => {
+      if (selectedOption === 3) {
+         alert("Cảm ơn bạn đã đặt hàng");
+         setSelectedOption(4);
+         setShowBuyBack(true);
+         setShowEvaluate(true);
+      }
+   };
 
-    return (
-        <>
-            <div className="width_page tws-block" >
-                <div className="detailOrder_main">
-                    <div className="container">
-                        <Row gutter={0}>
-                            <Col className="" span={6}>
-                                <MenuDO />
-                            </Col>
-                            <Col span={18} className="col_2 tws-max-w-[840px]">
-                                <div className="tws-flex tws-justify-between tws-text-2xl tws-font-medium">Đơn mua
-                                    <div>
-                                        <select onChange={handleOptionChange}>
-                                            <option value={0}>đơn hàng đã đặt</option>
-                                            <option value={1}>đã xác nhận thông tin đơn hàng</option>
-                                            <option value={2}>giao hàng cho DVVC</option>
-                                            <option value={3}>chờ giao hàng</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <hr></hr>
-                                <div className="col_2_main tws-py-5">
-                                    <Title />
-                                    <OrderTracking selectedOption={selectedOption} style={{ marginTop: '90px' }} />
-                                    <ButtonConfirm selectedOption={selectedOption} onConfirmClick={handleConfirmClick} showBuyBack={showBuyBack} showEvaluate={showEvaluate} />
-                                    <Address selectedOption={selectedOption} />
-                                    <div>
-                                        <ItemProduct />
-                                        <ItemProduct />
-                                        <ItemProduct />
-                                    </div>
-                                    <TotalPayment />
-                                </div>
-                            </Col>
-                        </Row>
-                    </div>
-                </div>
+   return (
+      <>
+         <div>
+            <div className='tws-flex tws-justify-between tws-text-2xl tws-font-medium tws-items-center'>
+               <MenuTitle name={"CHI TIẾT ĐƠN HÀNG"} />
             </div>
-        </>
-    );
-}
+            <div className='tws-flex tws-flex-nowrap tws-gap-2 tws-justify-end tws-items-center'>
+               <Select className='tws-w-[200px]' onChange={handleOptionChange} defaultValue={0}>
+                  <Select.Option value={0}>Đơn hàng đã đặt</Select.Option>
+                  <Select.Option value={1}>Đã xác nhận thông tin đơn hàng</Select.Option>
+                  <Select.Option value={2}>Giao hàng cho DVVC</Select.Option>
+                  <Select.Option value={3}>Chờ giao hàng</Select.Option>
+               </Select>
+            </div>
+            <div className='col_2_main tws-py-5'>
+               <Title />
+               <OrderTracking selectedOption={selectedOption} style={{marginTop: "90px"}} />
+               <ButtonConfirm
+                  selectedOption={selectedOption}
+                  onConfirmClick={handleConfirmClick}
+                  showBuyBack={showBuyBack}
+                  showEvaluate={showEvaluate}
+               />
+               <Address selectedOption={selectedOption} />
+               <div>
+                  <ItemProduct />
+                  <ItemProduct />
+                  <ItemProduct />
+               </div>
+               <TotalPayment />
+            </div>
+         </div>
+      </>
+   );
+};
 
 export default DetailOrder;

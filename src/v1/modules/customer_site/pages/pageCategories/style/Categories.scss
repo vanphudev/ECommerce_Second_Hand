@@ -1,143 +1,208 @@
-/* Wrapper giới hạn toàn bộ giao diện */
-.wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-    /* Căn giữa toàn bộ giao diện */
-    padding: 0 15px;
-    /* Đảm bảo không gian trống ở hai bên */
+.slick-slider {
+   cursor: pointer;
+   &:hover {
+      .slick-prev {
+         opacity: 1;
+      }
+      .slick-next {
+         opacity: 1;
+      }
+   }
+   .slick-dots {
+      .slick-active {
+         button {
+            opacity: 1;
+            border-radius: 20px;
+         }
+         transition: all 0.09s;
+         background-color: #55018d;
+         border-radius: 20px;
+         width: 25px;
+      }
+      li {
+         width: 15px;
+         height: 15px;
+         button {
+            width: 15px;
+            height: 15px;
+            background-color: #55018d;
+            opacity: 0.5;
+            border-radius: 50%;
+            &:hover {
+               opacity: 1;
+            }
+         }
+         button::before {
+            display: none;
+         }
+      }
+   }
+   .slick-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0px;
+      z-index: 1000;
+      width: 25px;
+      box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+      height: 60px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      opacity: 0.1;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   .slick-prev:before {
+      content: "";
+   }
+   .slick-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0px;
+      z-index: 1000;
+      width: 25px;
+      box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+      height: 60px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      opacity: 0.1;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   .slick-next:before {
+      content: "";
+   }
 }
 
-/* Content-wrapper bọc cả sidebar và product column */
-.content-wrapper {
-    max-width: 1125px;
-    margin: 0 auto;
-    /* Căn giữa nội dung chính giữa */
-    display: flex;
-    flex-wrap: nowrap; // Đảm bảo các cột không xuống dòng
+/* Wrapper giới hạn toàn bộ giao diện */
+.wrapper {
+   max-width: 1440px;
+   margin: 0 auto;
+}
 
+.content-wrapper {
+   max-width: 1125px;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: nowrap;
 }
 
 .sidebar-column {
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
 }
 
 .product-column {
-
-    margin: 0;
-    padding: 0;
-    flex: 1; // Giúp cột chiếm toàn bộ khoảng trống còn lại và đẩy sát phải
+   margin: 0;
+   padding: 0;
+   flex: 1;
 }
 
-
 .title-page {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #000;
-    line-height: 24px;
+   margin-bottom: 20px;
+   border-bottom: 1px solid #000;
+   line-height: 24px;
 }
 
 .title-page span {
-    position: relative;
-    padding-bottom: 10px;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
+   position: relative;
+   padding-bottom: 10px;
+   display: inline-block;
+   font-weight: 600;
+   font-size: 24px;
+   text-transform: uppercase;
+   font-weight: 700;
 }
 
 .title-page span:before {
-    content: '';
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: -1px;
-    background: #fac126;
+   content: "";
+   width: 100%;
+   height: 2px;
+   position: absolute;
+   bottom: -1px;
+   background: #fac126;
 }
 
-
 .sort-cate-left ul {
-    list-style: none;
-    /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px;
-    /* Spacing between the buttons */
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   gap: 10px;
 }
 
 .sort-cate-left ul li {
-    border: 1px solid #FFD700;
-    /* Yellow border */
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
+   border: 1px solid #ffd700;
+   border-radius: 5px;
+   padding: 10px 15px;
+   cursor: pointer;
 }
 
 .sort-cate-left ul li a {
-    color: #55018d;
-    /* Purple text color */
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+   color: #55018d;
+   text-decoration: none;
+   font-weight: bold;
+   transition: background-color 0.3s, color 0.3s;
 }
 
 .sort-cate-left ul li:hover {
-    background-color: #FFD700;
-    /* Yellow background on hover */
+   background-color: #ffd700;
+   /* Yellow background on hover */
 }
 
 .sort-cate-left ul li:hover a {
-    color: #FFFFFF;
-    /* White text on hover */
+   color: #ffffff;
+   /* White text on hover */
 }
 
-
 .product-thumbnail img {
-    width: 206px;
-    /* Chiều rộng */
-    height: 360px;
-    /* Chiều cao */
-    object-fit: cover;
-    /* Đảm bảo hình ảnh được căn chỉnh */
+   width: 206px;
+   /* Chiều rộng */
+   height: 360px;
+   /* Chiều cao */
+   object-fit: cover;
+   /* Đảm bảo hình ảnh được căn chỉnh */
 }
 
 .item_product_main {
-    width: 206px;
-    /* Chiều rộng sản phẩm */
-    margin-bottom: 20px;
+   width: 206px;
+   /* Chiều rộng sản phẩm */
+   margin-bottom: 20px;
 }
 
 .products-view-grid .col-6 {
-    padding: 10px;
-    /* Giảm khoảng cách giữa các sản phẩm */
+   padding: 10px;
+   /* Giảm khoảng cách giữa các sản phẩm */
 }
 
 .sort-cate-left {
-    display: flex; // Sử dụng Flexbox
-    align-items: center; // Đảm bảo cả h3 và ul được căn giữa theo trục dọc
-    gap: 10px; // Khoảng cách giữa các phần tử
+   display: flex; // Sử dụng Flexbox
+   align-items: center; // Đảm bảo cả h3 và ul được căn giữa theo trục dọc
+   gap: 10px; // Khoảng cách giữa các phần tử
 }
 
 .sort-cate-left h3 {
-    margin: 0; // Xóa khoảng cách mặc định
+   margin: 0; // Xóa khoảng cách mặc định
 }
 
 .sort-cate-left ul {
-    list-style: none; // Xóa dấu đầu dòng
-    padding: 0;
-    margin: 0;
-    display: flex; // Sử dụng Flexbox để các phần tử ul nằm ngang
-    gap: 10px; // Khoảng cách giữa các phần tử li
+   list-style: none; // Xóa dấu đầu dòng
+   padding: 0;
+   margin: 0;
+   display: flex; // Sử dụng Flexbox để các phần tử ul nằm ngang
+   gap: 10px; // Khoảng cách giữa các phần tử li
 }
 
 .filter-icon .ant-btn {
-    background-color: #55018d; // Màu nền của nút Bộ lọc
-    border-color: #55018d; // Màu viền của nút Bộ lọc
+   background-color: #55018d; // Màu nền của nút Bộ lọc
+   border-color: #55018d; // Màu viền của nút Bộ lọc
 }
 
 .filter-icon .ant-btn:hover,
 .filter-icon .ant-btn:focus {
-    background-color: #6c32a2; // Màu khi hover hoặc focus
-    border-color: #6c32a2;
+   background-color: #6c32a2; // Màu khi hover hoặc focus
+   border-color: #6c32a2;
 }
