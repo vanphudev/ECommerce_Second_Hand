@@ -24,6 +24,9 @@ const Profile = React.lazy(() => import("../../pages/pageProfile"));
 const Cart = React.lazy(() => import("../../pages/pageCart"));
 const DetailOrder = React.lazy(() => import("../../pages/pageDetailOrder"));
 
+const Login =React.lazy(() => import("../../pages/pageLogin"));
+
+
 const URL_HOME_DEFAULT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME_DEFAULT;
 
 const URL_HOME_DEFAULT = import.meta.env
@@ -49,6 +52,8 @@ const URL_Profile = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_Profile;
 
 const URL_CART = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CART;
 const URL_DETAIL_ORDER = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAIL_ORDER;
+
+const URL_LOGIN = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LOGIN;
 
 const PublicRoutes = [
    {
@@ -123,6 +128,11 @@ const PublicRoutes = [
             path: URL_DETAIL_ORDER,
             element: <DetailOrder />,
 
+         },
+         {
+            // Routes for: Cart
+            path: URL_LOGIN,
+            element: <Login/>,
          },
          {
             // Routes for: NotFound
