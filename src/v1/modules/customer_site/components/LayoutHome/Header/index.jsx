@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DropdownMenu from "../../CardModalCart/CartModal";
 import "../Header/styles.scss";
 import logo_web from "../assets/logo-web.png";
@@ -7,7 +7,7 @@ import icon_4 from "../assets/logo-pay.svg";
 import icon_1 from "../assets/personal.svg";
 import icon_2 from "../assets/favorite.svg";
 import icon_3 from "../assets/cart.svg";
-import {AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import icon_5 from "../assets/gach-menu.svg";
 import icon_menu_1 from "../assets/icon_megamenu_1.png";
 import icon_menu_2 from "../assets/icon_megamenu_2.png";
@@ -19,7 +19,7 @@ import icon_menu_7 from "../assets/icon_megamenu_7.png";
 import icon_menu_8 from "../assets/icon_megamenu_8.png";
 import icon_menu_9 from "../assets/icon_megamenu_9.png";
 import icon_menu_10 from "../assets/icon_megamenu_10.png";
-import {AiOutlineRight} from "react-icons/ai";
+import { AiOutlineRight } from "react-icons/ai";
 
 const Header = () => {
    const [isSearch, setIsSearch] = useState(false);
@@ -34,7 +34,7 @@ const Header = () => {
       <>
          <header className='tws-w-full tws-bg-purple tws-sticky tws-top-0 tws-z-[10000]'>
             <div
-               style={{width: WIDTH_PAGE, margin: "0 auto"}}
+               style={{ width: WIDTH_PAGE, margin: "0 auto" }}
                className='tws-flex tws-flex-col tws-flex-wrap tws-gap-5'>
                <div class='header-cpn'>
                   <div class='header-cpn-1'>
@@ -95,18 +95,8 @@ const Header = () => {
                            </div>
                         </li>
                         <li>
-                           <a>
-                              <img src={icon_3} className='cart' alt=''></img>
-                           </a>
                            <div class='menu-gap'>
-                              <Link
-                                 className='tws-font-bold tws-text-white tws-no-underline'
-                                 to={import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CART}>
-                                 Giỏ hàng
-                              </Link>
-                              <div>
-                                 <a class='word-color'>48</a> sản phẩm
-                              </div>
+                              <DropdownMenu link={cartLink} />
                            </div>
                         </li>
                         <li>
