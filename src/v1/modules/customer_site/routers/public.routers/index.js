@@ -25,6 +25,7 @@ const Cart = React.lazy(() => import("../../pages/pageCart"));
 const DetailOrder = React.lazy(() => import("../../pages/pageDetailOrder"));
 const Payment = React.lazy(() => import("../../pages/pagePayment"));
 const ResetPasswordForm = React.lazy(() => import("../../pages/pageResetPassword/pageResetPassword"));
+const LoginPage = React.lazy(() => import("../../pages/pageLogin"));
 
 const URL_HOME_DEFAULT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME_DEFAULT;
 const URL_HOME = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_HOME;
@@ -33,7 +34,6 @@ const URL_CATEGORIES = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_CATEGOR
 const URL_SELLER_CENTRE = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_SELLER_CENTRE;
 const URL_DETAILS_PRODUCT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAILS_PRODUCT;
 const URL_LANDING = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LANDING_DEFAULT;
-
 const URL_MembershipPolicy = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_MembershipPolicy;
 const URL_PaymentPolicy = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_PaymentPolicy;
 const URL_BuyingGuide = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_BuyingGuide;
@@ -49,6 +49,7 @@ const URL_PROFILE_PAYMENT = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_PR
 const URL_FEATURE_BOOKING = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_FEATURE_BOOKING;
 const URL_ORDER_MANAGER = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_ORDER_MANAGER;
 const URL_PROFILE_RESET_PASSWORD = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_PROFILE_RESET_PASSWORD;
+const URL_LOGIN = import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_LOGIN;
 
 const PublicRoutes = [
    {
@@ -86,6 +87,10 @@ const PublicRoutes = [
          {
             path: URL_Contact,
             element: <Contact />,
+         },
+         {
+            path: URL_LOGIN,
+            element: <LoginPage />,
          },
          {
             path: URL_PROFILE,
