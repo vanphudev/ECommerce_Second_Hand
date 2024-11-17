@@ -5,31 +5,59 @@ $text_color: #55018d;
 $text_color2: #26aa99;
 
 .border {
-   border: 1px solid $border_color;
-   border-radius: 5px;
+  border: 1px solid $border_color;
+  border-radius: 5px;
 }
 
 .flex {
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon_color {
-   height: 32px;
-   width: 32px;
-   border-radius: 50%;
-   margin-right: 20px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 .menu_main {
-   border: 1px solid #6401a6;
-   border-radius: 5px;
-   .ant-menu-item {
-      height: 60px;
-      font-size: 16px;
-   }
-   .ant-menu-item-selected {
-      background-color: #c6b0f1;
-      color: #fff;
-   }
+  border: 1px solid #6401a6;
+  border-radius: 5px;
+  .ant-menu-item {
+    height: 60px;
+    font-size: 16px;
+  }
+  .ant-menu-item-selected {
+    background-color: #c6b0f1;
+    color: #fff;
+  }
+}
+
+.iconMenu1 {
+  height: 32px;
+  width: 32px;
+
+  border-radius: 50%;
+  padding: 5px;
+
+  background-color: #026cf7;
+
+  svg {
+    color: #fff;
+  }
+}
+.iconMenu2 {
+  height: 32px;
+  width: 32px;
+
+  border-radius: 50%;
+  padding: 5px;
+
+  background-color: #6401a6;
+
+  svg {
+    color: #fff;
+    font-size: 30px;
+  }
 }
