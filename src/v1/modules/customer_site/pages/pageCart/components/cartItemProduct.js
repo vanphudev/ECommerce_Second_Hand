@@ -2,13 +2,15 @@ import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import { Col, Row } from "antd";
-import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa6";
+import { FaPlus,FaMinus } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 
 import imgProduct from "../assets/images/image_product.png";
 import imgVoucher from "../assets/images/voucher.png";
+
+import { message } from "antd";
+
 const CartItemProduct = () => {
   const [quantity, setQuantity] = useState(1);
 
