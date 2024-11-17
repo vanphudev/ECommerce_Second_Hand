@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 import MembershipPolicy from "./components/MembershipPolicy/MembershipPolicy.jsx";
 const index = () => {
-    return (
-        <MembershipPolicy />
-    )
-}
+   return <MembershipPolicy />;
+};
 
-export default index
+export default index;

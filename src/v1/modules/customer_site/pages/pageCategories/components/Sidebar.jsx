@@ -7,17 +7,17 @@ import VendorFilter from "../../../components/SidebarCatogoryProduct/VendorFilte
 import "../style/Sidebar.scss";
 
 const Sidebar = () => {
-    return (
-        <div className='dqdt-sidebar'>
-            <CategoryList />
-            <div class='filter-content'>
-                <PriceFilter />
-                <TypeFilter />
-                <VendorFilter />
-                <TagFilter />
-            </div>
-        </div>
-    );
+   return (
+      <div className='dqdt-sidebar'>
+         <CategoryList />
+         <div class='filter-content'>
+            <PriceFilter />
+            <TypeFilter />
+            <VendorFilter />
+            <TagFilter />
+         </div>
+      </div>
+   );
 };
 
 export default Sidebar;
