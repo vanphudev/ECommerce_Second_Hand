@@ -8,17 +8,19 @@ import {Navigate} from "react-router-dom";
 import {Suspense} from "react";
 
 import TabOrderManager from "../../pages/pageTabOrderManager";
-import index from "../../pages/pageProfile";
 const Categories = React.lazy(() => import("../../pages/pageCategories"));
 const Home = React.lazy(() => import("../../pages/pageHome"));
 const SellerCentre = React.lazy(() => import("../../pages/pageSellerCentre/"));
 const DetailsProduct = React.lazy(() => import("../../pages/pageDetailsProduct"));
 const Landing = React.lazy(() => import("../../pages/pageLanding"));
+
+// Trang hướng dẫn và chính sách.
 const MembershipPolicy = React.lazy(() => import("../../pages/pageMembershipPolicy"));
 const PaymentPolicy = React.lazy(() => import("../../pages/pagePaymentPolicy"));
 const BuyingGuide = React.lazy(() => import("../../pages/pageBuyingGuide"));
 const PersonalInformationSecurity = React.lazy(() => import("../../pages/pagePersonalInformationSecurity"));
 const GiftOfGratitude = React.lazy(() => import("../../pages/pageGiftOfGratitude"));
+///
 const Contact = React.lazy(() => import("../../pages/pageContact"));
 const Profile = React.lazy(() => import("../../pages/pageProfile"));
 const Cart = React.lazy(() => import("../../pages/pageCart"));

@@ -3,7 +3,7 @@ import "./styles/skinCare.scss";
 import {SlArrowLeft, SlArrowRight} from "react-icons/sl";
 import {Col, Row} from "antd";
 import MenuTitle from "../../../components/MenuTitle/MenuTitle";
-import Card from "../../../components//CardProduct/Card.jsx";
+import Card from "../../../components/CardProduct/Card.jsx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

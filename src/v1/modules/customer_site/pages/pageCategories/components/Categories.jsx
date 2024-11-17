@@ -1,9 +1,13 @@
 import React, {useState} from "react";
-import {Row, Col, Card, Button, Drawer} from "antd"; // Import thêm Drawer
-import {FilterOutlined} from "@ant-design/icons"; // Import icon Filter
-import Sidebar from "./Sidebar"; // Import Sidebar đã có sẵn
+import {Row, Col, Button, Drawer, Pagination} from "antd";
+import {SlArrowLeft, SlArrowRight} from "react-icons/sl";
+import {FilterOutlined} from "@ant-design/icons";
+import Sidebar from "./Sidebar";
 import "../style/Categories.scss";
-const {Meta} = Card;
+import Card from "../../../components/CardProduct/Card.jsx";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Categories = () => {
    const [visible, setVisible] = useState(false); // State để điều khiển Drawer (Sidebar)
@@ -15,6 +19,54 @@ const Categories = () => {
       setVisible(false);
    };
 
+   function SampleNextArrow(props) {
+      const {className, style, onClick} = props;
+      return (
+         <div className={className} style={{display: "block", background: "#55018D"}} onClick={onClick}>
+            <SlArrowRight
+               style={{
+                  fontSize: "20px",
+                  color: "white",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+               }}
+            />
+         </div>
+      );
+   }
+   function SamplePrevArrow(props) {
+      const {className, style, onClick} = props;
+      return (
+         <div className={className} style={{display: "block", background: "#55018D"}} onClick={onClick}>
+            <SlArrowLeft
+               style={{
+                  fontSize: "20px",
+                  color: "white",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+               }}
+            />
+         </div>
+      );
+   }
+   var settings = {
+      infinite: true,
+      speed: 500,
+      rows: 3,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+   };
+   const cardCount = 50;
+   const cardsPerPage = 10;
+   const [currentPage, setCurrentPage] = useState(1);
+   const startIndex = (currentPage - 1) * cardsPerPage;
+   const endIndex = startIndex + cardsPerPage;
    return (
       <div className='wrapper'>
          <div className='bodywrap'>
@@ -67,6 +119,24 @@ const Categories = () => {
                            </div>
                         </div>
                      </div>
+                     <Row>
+                        <Col span={24} className='list-product'>
+                           <Slider {...settings}>
+                              {Array.from({length: cardCount})
+                                 .slice(startIndex, endIndex)
+                                 .map((_, index) => (
+                                    <Card key={index} />
+                                 ))}
+                           </Slider>
+                        </Col>
+                     </Row>{" "}
+                     <Pagination
+                        align='center'
+                        defaultCurrent={1}
+                        total={cardCount}
+                        pageSize={cardsPerPage}
+                        onChange={(page) => setCurrentPage(page)} // Cập nhật trang hiện tại khi người dùng thay đổi trang
+                     />
                   </Col>
                </Row>
             </div>
