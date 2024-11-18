@@ -98,7 +98,7 @@ const Footer = () => {
                   </ul>
                </div>
             </div>
-            <div className='tws-w-full tws-bg-purple tws-h-[100px] tws-flex tws-items-center tws-justify-center'>
+            <div className='tws-w-[1440px] tws-bg-purple tws-h-[100px] tws-flex tws-items-center tws-justify-center'>
                <p className='tws-text-white'>
                   Được phát triển bởi{" "}
                   <span className='tws-font-bold'>

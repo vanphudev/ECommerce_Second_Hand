@@ -194,7 +194,7 @@
    position: absolute;
    background-color: #fff;
    min-width: 160px;
-   box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
    z-index: 1;
    border-radius: 10px 0 0 10px;
    width: 211px;
@@ -211,7 +211,7 @@
    font-style: normal;
    font-weight: 550;
    width: 211px;
-   height: 28px;
+   height: 35px;
 }
 
 .icon-m {
@@ -248,7 +248,7 @@
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 1;
    width: 916px;
-   height: 280px;
+   height: 350px;
    border-radius: 0 10px 10px 0;
    border: solid #fac126 1px;
 }
@@ -261,7 +261,7 @@
 
 .title-submenu {
    font-family: Inter;
-   font-size: 14px;
+   font-size: 16px;
    font-style: normal;
    font-weight: 700;
    color: #000;
@@ -270,7 +270,7 @@
    list-style-type: none;
    color: #ababab;
    font-family: Inter;
-   font-size: 12px;
+   font-size: 14px;
    font-style: normal;
    font-weight: 400;
    padding: 0;
