@@ -3,6 +3,8 @@ import {Menu, Modal} from "antd";
 import {Link, useLocation} from "react-router-dom";
 import Logo from "../../assets/icons/logo-amazing-tech.png";
 import "./styles/style.scss";
+import {ShoppingCartOutlined} from "@mui/icons-material";
+import {ShoppingOutlined} from "@ant-design/icons";
 
 const Icon1 = () => <div className='icon_color tws-bg-forest-green tws-w-[32px]'></div>;
 const Icon2 = () => <div className='icon_color tws-bg-yellow tws-w-[32px]'></div>;
@@ -26,13 +28,21 @@ const items = [
    },
    {
       key: "3",
-      icon: <Icon3 />,
+      icon: (
+         <span className='iconMenu1'>
+            <ShoppingCartOutlined />{" "}
+         </span>
+      ),
       label: "Đơn mua",
       path: import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_ORDER_MANAGER,
    },
    {
       key: "4",
-      icon: <Icon4 />,
+      icon: (
+         <span className='iconMenu2'>
+            <ShoppingOutlined />
+         </span>
+      ),
       label: "Đơn mua chi tiết",
       path: import.meta.env.VITE_ROUTER_MODULES_CUSTOMER_SITE_DETAIL_ORDER,
    },
@@ -81,7 +91,9 @@ const MenuDO = () => {
             }))}
          />
          <Modal
+            style={{zIndex: "9999999999"}}
             title='Thông báo'
+            centered
             visible={isModalVisible}
             onOk={() => setIsModalVisible(false)}
             onCancel={() => setIsModalVisible(false)}>

@@ -14,10 +14,10 @@ const ProductModal = () => {
                </Col>
                <Col
                   span={15}
-                  className='col2 tws-block tws-overflow-hidden tws-whitespace-nowrap tws-overflow-ellipsis'>
+                  className='col2 tws-block tws-overflow-hidden tws-whitespace-nowrap tws-overflow-ellipsis tws-font-normal'>
                   Sữa Rửa Mặt Cetaphil Dịu Lành Cho Da Nhạy Cảm 250ml (Mới)
                </Col>
-               <Col span={4} className='col3'>
+               <Col span={4} className='col3 tws-font-normal'>
                   đ144.000
                </Col>
             </Row>

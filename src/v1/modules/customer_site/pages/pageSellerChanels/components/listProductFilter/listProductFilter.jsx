@@ -61,6 +61,7 @@ const ListProductFilter = () => {
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
    };
+
    const cardCount = 50;
    const cardsPerPage = 10;
    const [currentPage, setCurrentPage] = useState(1);

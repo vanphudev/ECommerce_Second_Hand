@@ -1,82 +1,187 @@
 import React, {useState} from "react";
-import {Col, Row} from "antd";
-import {getItem} from "../items/item";
+import {
+   Box,
+   Button,
+   Typography,
+   Stack,
+   TextField,
+   RadioGroup,
+   FormControlLabel,
+   Radio,
+   Dialog,
+   DialogTitle,
+   DialogContent,
+   DialogActions,
+} from "@mui/material";
+import {Modal, message} from "antd"; // Thư viện antd
 import "./style.scss";
-const Address = ({selectedOption}) => {
-   const [isExpanded, setIsExpanded] = useState(false);
+import MenuTitle from "../../../../components/MenuTitle/MenuTitle";
 
-   const toggleExpand = () => {
-      setIsExpanded(!isExpanded);
+const Address = () => {
+   const generateRandomAddress = () => {
+      const names = ["Nguyễn Văn A", "Trần Thị B", "Lê Văn C"];
+      const phones = ["+84 123 456 789", "+84 987 654 321", "+84 555 666 777"];
+      const addresses = [
+         "123 Đường ABC, Phường XYZ, Quận 1, TP. Hồ Chí Minh",
+         "456 Đường DEF, Phường UVW, Quận 2, TP. Hà Nội",
+         "789 Đường GHI, Phường RST, Quận 3, TP. Đà Nẵng",
+      ];
+
+      return {
+         id: Math.floor(Math.random() * 1000),
+         name: names[Math.floor(Math.random() * names.length)],
+         phone: phones[Math.floor(Math.random() * phones.length)],
+         address: addresses[Math.floor(Math.random() * addresses.length)],
+      };
    };
 
-   const items = getItem(selectedOption)
-      .filter((item, index) => index !== 4)
-      .filter((item, index) => index <= selectedOption)
-      .reverse();
+   const [addresses, setAddresses] = useState([
+      generateRandomAddress(),
+      generateRandomAddress(),
+      generateRandomAddress(),
+   ]);
 
-   const check = (item, index) => {
-      const reIndex = items.length - index - 1;
-      if (reIndex === 0) {
-         return "Đơn hàng đã được đặt";
-      } else if (item.status === "pending" || item.status === "finish") {
-         if (reIndex === 1) {
-            return "Người gửi đang chuẩn bị hàng";
-         } else if (reIndex === 2) {
-            return (
-               <>
-                  Đơn vị vận chuyển lấy hàng thành công.
-                  <br />
-                  Đơn hàng sẽ sớm được giao, vui lòng chú ý điện thoại.
-               </>
-            );
-         } else {
-            return "Giao hàng thành công";
-         }
+   const [isAdding, setIsAdding] = useState(false); // Trạng thái hiển thị form thêm/sửa địa chỉ
+   const [currentAddress, setCurrentAddress] = useState(null); // Địa chỉ đang được sửa
+
+   const handleAddNewAddress = () => {
+      setCurrentAddress(null); // Không có địa chỉ đang sửa
+      setIsAdding(true);
+   };
+
+   const handleEditAddress = (address) => {
+      setCurrentAddress(address); // Gán địa chỉ hiện tại để sửa
+      setIsAdding(true);
+   };
+
+   const handleClose = () => {
+      setIsAdding(false);
+   };
+
+   const handleDeleteAddress = (id) => {
+      Modal.confirm({
+         title: "Xóa địa chỉ",
+         content: "Bạn có chắc chắn muốn xóa địa chỉ này không?",
+         okText: "Xóa",
+         okType: "danger",
+         cancelText: "Hủy",
+         zIndex: 999999,
+         onOk: () => {
+            setAddresses(addresses.filter((address) => address.id !== id));
+            message.success("Xóa địa chỉ thành công!");
+         },
+      });
+   };
+
+   const handleSaveAddress = () => {
+      // Lưu hoặc cập nhật địa chỉ
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const addressDetails = document.getElementById("addressDetails").value;
+      const addressLocation = document.getElementById("addressLocation").value;
+
+      if (currentAddress) {
+         // Cập nhật địa chỉ
+         setAddresses((prev) =>
+            prev.map((addr) =>
+               addr.id === currentAddress.id
+                  ? {
+                       ...addr,
+                       name,
+                       phone,
+                       address: `${addressLocation}, ${addressDetails}`,
+                    }
+                  : addr
+            )
+         );
+         message.success("Cập nhật địa chỉ thành công!");
+      } else {
+         // Thêm mới địa chỉ
+         const newAddress = {
+            id: addresses.length + 1,
+            name,
+            phone,
+            address: `${addressLocation}, ${addressDetails}`,
+         };
+         setAddresses([...addresses, newAddress]);
+         message.success("Thêm địa chỉ thành công!");
       }
+      setIsAdding(false);
    };
 
    return (
       <>
-         <div className='Address_main border'>
-            <Row gutter={30}>
-               <Col span={8} className='tws-leading-10'>
-                  <div className='tws-text-lg'>Địa chỉ nhận hàng</div>
-                  <div className='tws-text-dark-gray-01'>
-                     <p>Nguyễn Văn Phú</p>
-                     <p>(+84) 377985402</p>
-                     <p className='tws-leading-6'>
-                        302/1/19, Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, TP. Hồ Chí Minh
-                     </p>
-                  </div>
-               </Col>
-               <Col span={16} className='tws-leading-10'>
-                  <div className={`content ${isExpanded ? "expanded" : "compacted"}`}>
-                     {items.map((item, index) => (
-                        <Row
-                           key={index}
-                           gutter={20}
-                           className={`col_row tws-pl-[10px] tws-leading-6 ${
-                              item.status === "finish" ? "completed" : "finish"
-                           }`}>
-                           <Col className='icon tws-flex tws-items-center tws-justify-center tws-bg-teal tws-text-white tws-w-[30px] tws-h-[30px] tws-rounded-full'>
-                              {item.icon}
-                           </Col>
-                           <Col>{item.date || "Chưa có ngày"}</Col>
-                           <Col className=''>
-                              <p className='tws-font-medium'>{item.text}</p>
-                              <p>{check(item, index)}</p>
-                           </Col>
-                        </Row>
-                     ))}
-                  </div>
-                  <button
-                     onClick={toggleExpand}
-                     className='toggle-btn tws-border-none tws-cursor-pointer tws-font-semibold'>
-                     {isExpanded ? "Thu gọn" : "Xem thêm"}
-                  </button>
-               </Col>
-            </Row>
-         </div>
+         <Box sx={{margin: "auto", width: "100%"}}>
+            <MenuTitle name={"ĐỊA CHỈ CỦA BẠN"} />
+            <Button variant='contained' color='primary' sx={{marginBottom: 2}} onClick={handleAddNewAddress}>
+               + Thêm địa chỉ mới
+            </Button>
+            {addresses.map((address) => (
+               <Box
+                  key={address.id}
+                  sx={{
+                     padding: 2,
+                     border: "1px solid #ddd",
+                     borderRadius: 2,
+                     marginBottom: 2,
+                  }}>
+                  <Stack direction='row' justifyContent='space-between' alignItems='center'>
+                     <Typography variant='subtitle1'>
+                        <strong>{address.name}</strong>
+                        <br />
+                        {address.phone}
+                        <br />
+                        <span>{address.address}</span>
+                     </Typography>
+                     <Stack direction='row' spacing={1}>
+                        <Button variant='outlined' size='small' onClick={() => handleEditAddress(address)}>
+                           Sửa
+                        </Button>
+                        <Button
+                           variant='outlined'
+                           size='small'
+                           color='error'
+                           onClick={() => handleDeleteAddress(address.id)}>
+                           Xóa
+                        </Button>
+                     </Stack>
+                  </Stack>
+               </Box>
+            ))}
+            <Dialog open={isAdding} onClose={handleClose} maxWidth='sm' fullWidth>
+               <DialogTitle>{currentAddress ? "Chỉnh sửa địa chỉ" : "Thêm địa chỉ mới"}</DialogTitle>
+               <DialogContent>
+                  <Stack spacing={2}>
+                     <TextField id='name' label='Họ và tên' defaultValue={currentAddress?.name || ""} fullWidth />
+                     <TextField id='phone' label='Số điện thoại' defaultValue={currentAddress?.phone || ""} fullWidth />
+                     <TextField
+                        id='addressLocation'
+                        label='Tỉnh/ Thành phố, Quận/ Huyện, Phường/ Xã'
+                        defaultValue={currentAddress ? currentAddress.address.split(", ").slice(0, -1).join(", ") : ""}
+                        fullWidth
+                     />
+                     <TextField
+                        id='addressDetails'
+                        label='Địa chỉ cụ thể'
+                        defaultValue={currentAddress ? currentAddress.address.split(", ").slice(-1).join(", ") : ""}
+                        fullWidth
+                     />
+                     <RadioGroup row>
+                        <FormControlLabel value='home' control={<Radio />} label='Nhà riêng' />
+                        <FormControlLabel value='office' control={<Radio />} label='Văn phòng' />
+                     </RadioGroup>
+                  </Stack>
+               </DialogContent>
+               <DialogActions>
+                  <Button onClick={handleClose} color='secondary'>
+                     Trở lại
+                  </Button>
+                  <Button variant='contained' color='primary' onClick={handleSaveAddress}>
+                     Lưu
+                  </Button>
+               </DialogActions>
+            </Dialog>
+         </Box>
       </>
    );
 };

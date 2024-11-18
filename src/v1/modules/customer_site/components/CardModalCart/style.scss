@@ -4,7 +4,6 @@ $color_red: #ff1616;
   .dropdown_content {
     border: 1px solid #d5d4d4;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    transform: translateX(5%);
     .link_product {
       text-decoration: none;
       display: block;
@@ -34,4 +33,9 @@ $color_red: #ff1616;
       }
     }
   }
+}
+.menu-gap {
+  //done
+  display: grid;
+  gap: 4px;
 }
